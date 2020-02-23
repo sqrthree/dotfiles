@@ -19,7 +19,12 @@ Plug 'mhinz/vim-signify'  " Show a diff using Vim its sign column.
 "
 " Format
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
+"
+" Coding
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'ekalinin/Dockerfile.vim' " Vim syntax file for Docker's Dockerfile and snippets for snipMate.
+" Plugin 'SirVer/ultisnips'        " The ultimate solution for snippets in Vim.
+" Plugin 'honza/vim-snippets'      " The ultimate solution for snippets in Vim.
 "
 " Editing
 Plug 'tpope/vim-surround'           " Quoting/parenthesizing made simple.
@@ -27,6 +32,7 @@ Plug 'junegunn/vim-easy-align'      " A simple, easy-to-use Vim alignment plugin
 Plug 'jiangmiao/auto-pairs'         " Insert or delete brackets, parens, quotes in pair.
 Plug 'terryma/vim-multiple-cursors' " True Sublime Text style multiple selections for Vim.
 Plug 'scrooloose/nerdcommenter'     " For intensely orgasmic commenting.
+Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -53,3 +59,14 @@ set ignorecase
 " vim-prettier
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync " Running before saving async (vim 8+)
+
+" preservim/nerdtree
+map <C-b> :NERDTreeToggle<CR>
+
+" Move lines vertical
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
