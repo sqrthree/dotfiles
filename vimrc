@@ -25,6 +25,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ekalinin/Dockerfile.vim' " Vim syntax file for Docker's Dockerfile and snippets for snipMate.
 " Plugin 'SirVer/ultisnips'        " The ultimate solution for snippets in Vim.
 " Plugin 'honza/vim-snippets'      " The ultimate solution for snippets in Vim.
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
 "
 " Editing
 Plug 'tpope/vim-surround'           " Quoting/parenthesizing made simple.
