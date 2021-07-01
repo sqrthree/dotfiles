@@ -22,11 +22,14 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 "
 " Coding
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'ekalinin/Dockerfile.vim' " Vim syntax file for Docker's Dockerfile and snippets for snipMate.
+Plug 'ekalinin/Dockerfile.vim'     " Vim syntax file for Docker's Dockerfile and snippets for snipMate.
+"
 " Plugin 'SirVer/ultisnips'        " The ultimate solution for snippets in Vim.
 " Plugin 'honza/vim-snippets'      " The ultimate solution for snippets in Vim.
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
 "
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
+Plug 'codota/tabnine-vim'          " Code Faster with AI Code Completions
+
 " Editing
 Plug 'tpope/vim-surround'           " Quoting/parenthesizing made simple.
 Plug 'junegunn/vim-easy-align'      " A simple, easy-to-use Vim alignment plugin.
@@ -48,12 +51,12 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-" set backspace=indent,eol,start " Set up in vim-sensible plugin.
 set scrolloff=100
 set cursorline
 set cc=80
 set showmatch
 set ignorecase
+" set backspace=indent,eol,start " Set up in vim-sensible plugin.
 
 " Plugin Configurations
 "
