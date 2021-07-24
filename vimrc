@@ -41,7 +41,6 @@ Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
-" syntax enable "Set up in vim-sensible plugin.
 colorscheme solarized
 set background=dark
 set encoding=utf-8
@@ -56,7 +55,6 @@ set cursorline
 set cc=80
 set showmatch
 set ignorecase
-" set backspace=indent,eol,start " Set up in vim-sensible plugin.
 
 " Plugin Configurations
 "
@@ -75,6 +73,9 @@ let g:NERDCommentEmptyLines = 1
 
 " preservim/nerdtree
 map <C-b> :NERDTreeToggle<CR>
+
+" resize splits when the window is resized
+au VimResized * :wincmd =
 
 " Move lines up or down with alt + j/k
 nnoremap ∆ :m .+1<CR>==
