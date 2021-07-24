@@ -76,7 +76,7 @@ let g:NERDCommentEmptyLines = 1
 " preservim/nerdtree
 map <C-b> :NERDTreeToggle<CR>
 
-" Move lines vertical
+" Move lines up or down with alt + j/k
 nnoremap ∆ :m .+1<CR>==
 nnoremap ˚ :m .-2<CR>==
 inoremap ∆ <Esc>:m .+1<CR>==gi
