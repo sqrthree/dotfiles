@@ -64,6 +64,15 @@ set ignorecase
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync " Running before saving async (vim 8+)
 
+" scrooloose/nerdcommenter
+filetype plugin on
+" add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+" align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+" allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
 " preservim/nerdtree
 map <C-b> :NERDTreeToggle<CR>
 
