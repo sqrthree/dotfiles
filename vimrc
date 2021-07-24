@@ -55,6 +55,7 @@ set cursorline
 set cc=80
 set showmatch
 set ignorecase
+set smartcase
 
 " Plugin Configurations
 "
