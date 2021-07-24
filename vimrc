@@ -37,6 +37,8 @@ Plug 'jiangmiao/auto-pairs'         " Insert or delete brackets, parens, quotes 
 Plug 'terryma/vim-multiple-cursors' " True Sublime Text style multiple selections for Vim.
 Plug 'scrooloose/nerdcommenter'     " For intensely orgasmic commenting.
 Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -74,6 +76,9 @@ let g:NERDCommentEmptyLines = 1
 
 " preservim/nerdtree
 map <C-b> :NERDTreeToggle<CR>
+
+" junegunn/fzf.vim
+nmap <C-p> :Files<CR>
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
