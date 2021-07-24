@@ -5,6 +5,7 @@
 "
 
 " syntax enable "Set up in vim-sensible plugin.
+" set backspace=indent,eol,start " Set up in vim-sensible plugin.
 colorscheme solarized
 set background=dark
 set encoding=utf-8
@@ -14,7 +15,6 @@ set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
-" set backspace=indent,eol,start " Set up in vim-sensible plugin.
 set scrolloff=100
 set cursorline
 set cc=80
