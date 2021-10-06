@@ -31,6 +31,7 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-complet
 Plug 'codota/tabnine-vim'          " Code Faster with AI Code Completions
 
 " Editing
+Plug 'kamykn/spelunker.vim'         " Plugin that improves Vim's spell checking function.
 Plug 'tpope/vim-surround'           " Quoting/parenthesizing made simple.
 Plug 'junegunn/vim-easy-align'      " A simple, easy-to-use Vim alignment plugin.
 Plug 'jiangmiao/auto-pairs'         " Insert or delete brackets, parens, quotes in pair.
@@ -79,6 +80,9 @@ map <C-b> :NERDTreeToggle<CR>
 
 " junegunn/fzf.vim
 nmap <C-p> :Files<CR>
+
+" kamykn/spelunker.vim
+let g:spelunker_check_type = 2  " Spellcheck displayed words in buffer. Fast and dynamic.
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
