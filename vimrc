@@ -59,6 +59,8 @@ set cc=80
 set showmatch
 set ignorecase
 set smartcase
+set splitbelow
+set splitright
 
 " Plugin Configurations
 "
