@@ -61,6 +61,7 @@ set ignorecase
 set smartcase
 set splitbelow
 set splitright
+set clipboard=unnamedplus " Copy paste between vim and everything else
 
 " Plugin Configurations
 "
