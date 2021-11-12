@@ -45,22 +45,23 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 colorscheme solarized
-set background=dark
-set encoding=utf-8
-set number
+
+set background=dark       " Tell vim what the background color looks like
+set encoding=utf-8        " The encoding displayed
+set number                " Line numbers
 set relativenumber
-set tabstop=2
+set tabstop=2             " Insert 2 spaces for a tab
 set softtabstop=2
-set shiftwidth=2
-set expandtab
+set shiftwidth=2          " Change the number of space characters inserted for indentation
+set expandtab             " Converts tabs to spaces
 set scrolloff=100
-set cursorline
+set cursorline            " Enable highlighting of the current line
 set cc=80
 set showmatch
 set ignorecase
 set smartcase
-set splitbelow
-set splitright
+set splitbelow            " Horizontal splits will automatically be below
+set splitright            " Vertical splits will automatically be to the right
 set clipboard=unnamedplus " Copy paste between vim and everything else
 
 " Plugin Configurations
