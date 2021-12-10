@@ -39,7 +39,8 @@ Plug 'terryma/vim-multiple-cursors' " True Sublime Text style multiple selection
 Plug 'scrooloose/nerdcommenter'     " For intensely orgasmic commenting.
 Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'             " A general-purpose command-line fuzzy finder.
+Plug 'dense-analysis/ale'           " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support.
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
