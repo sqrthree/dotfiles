@@ -91,7 +91,7 @@ let g:NERDCommentEmptyLines = 1
 map <C-b> :NERDTreeToggle<CR>
 
 " junegunn/fzf.vim
-nmap <C-p> :Files<CR>
+nmap <C-p> :GFiles<CR>
 
 " kamykn/spelunker.vim
 let g:spelunker_check_type = 2  " Spellcheck displayed words in buffer. Fast and dynamic.
