@@ -27,8 +27,6 @@ Plug 'ekalinin/Dockerfile.vim'     " Vim syntax file for Docker's Dockerfile and
 " Plugin 'SirVer/ultisnips'        " The ultimate solution for snippets in Vim.
 " Plugin 'honza/vim-snippets'      " The ultimate solution for snippets in Vim.
 "
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
-Plug 'codota/tabnine-vim'          " Code Faster with AI Code Completions
 
 " Editing
 Plug 'kamykn/spelunker.vim'         " Plugin that improves Vim's spell checking function.
@@ -41,6 +39,15 @@ Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'             " A general-purpose command-line fuzzy finder.
 Plug 'dense-analysis/ale'           " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support.
+
+" When started with plain Vim, the plugin is not registered
+" and PlugClean will try to remove it
+if has('nvim')
+  Plug 'neovim/nvim-lspconfig'      " Quickstart configurations for the Nvim LSP client.
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter configurations and abstraction layer for Neovim.
+else
+  Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
+endif
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
