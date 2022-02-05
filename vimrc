@@ -105,6 +105,10 @@ nmap <C-p> :GFiles<CR>
 " kamykn/spelunker.vim
 let g:spelunker_check_type = 2  " Spellcheck displayed words in buffer. Fast and dynamic.
 
+" dense-analysis/ale
+let g:ale_sign_error = '🚨'     " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
+let g:ale_sign_warning = '⚠️'   " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
+
 " resize splits when the window is resized
 au VimResized * :wincmd =
 
