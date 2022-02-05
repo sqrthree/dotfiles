@@ -44,6 +44,15 @@ Plug 'dense-analysis/ale'           " Check syntax in Vim asynchronously and fix
 " and PlugClean will try to remove it
 if has('nvim')
   Plug 'neovim/nvim-lspconfig'      " Quickstart configurations for the Nvim LSP client.
+  Plug 'hrsh7th/cmp-nvim-lsp'       " nvim-cmp source for neovim's built-in language server client.
+  Plug 'hrsh7th/cmp-buffer'         " nvim-cmp source for buffer words
+  Plug 'hrsh7th/cmp-path'           " nvim-cmp source for filesystem paths.
+  Plug 'hrsh7th/cmp-cmdline'        " nvim-cmp source for vim's cmdline.
+  Plug 'hrsh7th/nvim-cmp'           " A completion engine plugin for neovim written in Lua.
+
+  " For ultisnips users.
+  " Plug 'quangnguyen30192/cmp-nvim-ultisnips'
+
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Treesitter configurations and abstraction layer for Neovim.
 else
   Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer --ts-completer' }
