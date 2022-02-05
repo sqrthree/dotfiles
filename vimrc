@@ -79,7 +79,7 @@ set ignorecase
 set smartcase
 set splitbelow            " Horizontal splits will automatically be below
 set splitright            " Vertical splits will automatically be to the right
-set clipboard=unnamedplus " Copy paste between vim and everything else
+" set clipboard=unnamedplus " Copy paste between vim and everything else
 
 " Plugin Configurations
 "
