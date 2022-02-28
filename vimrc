@@ -39,6 +39,7 @@ Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'             " A general-purpose command-line fuzzy finder.
 Plug 'dense-analysis/ale'           " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support.
+Plug 'easymotion/vim-easymotion'    " Provides a much simpler way to use some motions in vim.
 
 " When started with plain Vim, the plugin is not registered
 " and PlugClean will try to remove it
@@ -107,7 +108,17 @@ let g:spelunker_check_type = 2  " Spellcheck displayed words in buffer. Fast and
 
 " dense-analysis/ale
 let g:ale_sign_error = '🚨'     " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
-let g:ale_sign_warning = '⚠️'   " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
+let g:ale_sign_warning = '⚠️'    " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
+" let g:ale_linters_explicit = 1  " Only run linters named in ale_linters settings
+let g:ale_linters = {
+\ 'javascript': ['cspell', 'eslint', 'tsserver'],
+\ 'typescript': ['cspell', 'eslint', 'tsserver', 'typecheck'],
+\}
+
+" easymotion/vim-easymotion
+map <Leader>f <Plug>(easymotion-bd-f)   " <Leader>f{char} to move to {char}
+map <Leader>L <Plug>(easymotion-bd-jk)  " Move to line
+map <Leader>w <Plug>(easymotion-bd-w)   " Move to word
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
