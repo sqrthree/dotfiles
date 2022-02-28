@@ -116,9 +116,7 @@ let g:ale_linters = {
 \}
 
 " easymotion/vim-easymotion
-map <Leader>f <Plug>(easymotion-bd-f)   " <Leader>f{char} to move to {char}
-map <Leader>L <Plug>(easymotion-bd-jk)  " Move to line
-map <Leader>w <Plug>(easymotion-bd-w)   " Move to word
+let g:EasyMotion_smartcase = 1          " Turn on case-insensitive feature
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
