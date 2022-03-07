@@ -3,8 +3,9 @@
 "   mkdir -p ~/.vim/pack/tpope/start && cd ~/.vim/pack/tpope/start && git clone https://tpope.io/vim/sensible.git
 "
 
-" syntax enable "Set up in vim-sensible plugin.
-" set backspace=indent,eol,start " Set up in vim-sensible plugin.
+syntax enable
+
+set backspace=indent,eol,start
 set background=dark
 set encoding=utf-8
 set number
@@ -19,6 +20,8 @@ set cc=80
 set showmatch
 set ignorecase
 set smartcase
+set splitbelow
+set splitright
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
