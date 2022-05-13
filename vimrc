@@ -33,7 +33,7 @@ Plug 'kamykn/spelunker.vim'         " Plugin that improves Vim's spell checking 
 Plug 'tpope/vim-surround'           " Quoting/parenthesizing made simple.
 Plug 'junegunn/vim-easy-align'      " A simple, easy-to-use Vim alignment plugin.
 Plug 'jiangmiao/auto-pairs'         " Insert or delete brackets, parens, quotes in pair.
-Plug 'terryma/vim-multiple-cursors' " True Sublime Text style multiple selections for Vim.
+Plug 'mg979/vim-visual-multi'       " True Sublime Text style multiple selections for Vim.
 Plug 'scrooloose/nerdcommenter'     " For intensely orgasmic commenting.
 Plug 'preservim/nerdtree'           " A file system explorer for the Vim editor.
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
