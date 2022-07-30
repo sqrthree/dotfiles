@@ -122,6 +122,11 @@ let g:ale_linters = {
 " easymotion/vim-easymotion
 let g:EasyMotion_smartcase = 1          " Turn on case-insensitive feature
 
+" Vim Configurations
+"
+" map the leader key to ","
+let mapleader = ","
+
 " resize splits when the window is resized
 au VimResized * :wincmd =
 
