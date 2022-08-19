@@ -74,7 +74,7 @@ set shiftwidth=2          " Change the number of space characters inserted for i
 set expandtab             " Converts tabs to spaces
 set scrolloff=100
 set cursorline            " Enable highlighting of the current line
-set cc=80
+set cc=80,120
 set showmatch
 set ignorecase
 set smartcase
@@ -98,6 +98,7 @@ let g:NERDDefaultAlign = 'left'
 let g:NERDCommentEmptyLines = 1
 
 " preservim/nerdtree
+let NERDTreeShowHidden=1          " Show hidden files
 map <C-b> :NERDTreeToggle<CR>
 " exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
@@ -113,6 +114,7 @@ let g:spelunker_check_type = 2  " Spellcheck displayed words in buffer. Fast and
 " dense-analysis/ale
 let g:ale_sign_error = '🚨'     " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
 let g:ale_sign_warning = '⚠️'    " https://github.com/dense-analysis/ale#5v-how-can-i-change-the-signs-ale-uses
+let g:ale_lint_on_enter = 0     " Don not run linters on opening a file.
 " let g:ale_linters_explicit = 1  " Only run linters named in ale_linters settings
 let g:ale_linters = {
 \ 'javascript': ['cspell', 'eslint', 'tsserver'],
