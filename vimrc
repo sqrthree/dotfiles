@@ -124,6 +124,12 @@ let g:ale_linters = {
 " easymotion/vim-easymotion
 let g:EasyMotion_smartcase = 1          " Turn on case-insensitive feature
 
+" junegunn/vim-easy-align
+  " Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+  " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 " Vim Configurations
 "
 " map the leader key to ","
