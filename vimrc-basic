@@ -16,12 +16,15 @@ set shiftwidth=2
 set expandtab
 set scrolloff=100
 set cursorline
-set cc=80
+set cc=80,120
 set showmatch
 set ignorecase
 set smartcase
 set splitbelow
 set splitright
+
+" map the leader key to ","
+let mapleader = ","
 
 " resize splits when the window is resized
 au VimResized * :wincmd =
@@ -33,3 +36,7 @@ inoremap ∆ <Esc>:m .+1<CR>==gi
 inoremap ˚ <Esc>:m .-2<CR>==gi
 vnoremap ∆ :m '>+1<CR>gv=gv
 vnoremap ˚ :m '<-2<CR>gv=gv
+
+" Go to home and end using capitalized directions
+noremap H ^
+noremap L $
