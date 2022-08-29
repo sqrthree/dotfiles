@@ -99,7 +99,7 @@ let g:NERDCommentEmptyLines = 1
 
 " preservim/nerdtree
 let NERDTreeShowHidden=1          " Show hidden files
-map <C-b> :NERDTreeToggle<CR>
+map <C-b> :NERDTreeToggle<CR>     " Ctrl + b
 " exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 " open the existing NERDTree on each new tab.
