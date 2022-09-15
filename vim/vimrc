@@ -72,7 +72,7 @@ set tabstop=2             " Insert 2 spaces for a tab
 set softtabstop=2
 set shiftwidth=2          " Change the number of space characters inserted for indentation
 set expandtab             " Converts tabs to spaces
-set scrolloff=100
+set scrolloff=999
 set cursorline            " Enable highlighting of the current line
 set cc=80,120
 set showmatch
