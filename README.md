@@ -1,14 +1,15 @@
-# vimrc
+# Dotfiles
 
-## How to Usage:
+Tracking my own dotfiles. Those are opinionated and contains only my own personal settings.
 
-```sh
-curl -fsSL https://raw.githubusercontent.com/sqrthree/vimrc/master/vimrc -o ~/.vimrc
-```
-
-or with basic configs:
+### Install vim only:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/sqrthree/vimrc/master/vimrc-basic -o ~/.vimrc
+curl -fsSL https://raw.githubusercontent.com/sqrthree/dotfiles/master/vim/vimrc -o ~/.vimrc
 ```
 
+or just with basic configs:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/sqrthree/dotfiles/master/vim/vimrc-basic -o ~/.vimrc
+```
