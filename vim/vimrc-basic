@@ -23,7 +23,7 @@ set shiftwidth=2                " Governs indentation.
 set expandtab                   " Converts tabs to spaces.
 set scrolloff=999               " Always show at least n lines above/below the cursor. set to a large value causes the cursor to stay in the middle line when possible.
 set cursorline                  " Highlight the current line.
-set cc=80,120                   " Setup a ruler at apecific columns.
+set cc=80,120                   " Setup a ruler at specific columns.
 set showmatch                   " Enable a special bracket highlighting while in insert mode.
 set matchtime=3                 " To speed things up.
 set incsearch                   " Start searching before pressing enter.
