@@ -25,6 +25,7 @@ set scrolloff=999               " Always show at least n lines above/below the c
 set cursorline                  " Highlight the current line.
 set cc=80,120                   " Setup a ruler at specific columns.
 set ruler                       " Show a ruler on the right side of the status line.
+set wildmenu                    " Enable the enhanced command-line completion.
 set showmatch                   " Enable a special bracket highlighting while in insert mode.
 set matchtime=3                 " To speed things up.
 set incsearch                   " Start searching before pressing enter.
