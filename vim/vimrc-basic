@@ -22,6 +22,7 @@ set softtabstop=2               " How many columns the cursor moves right when y
 set shiftwidth=2                " Governs indentation.
 set expandtab                   " Converts tabs to spaces.
 set scrolloff=999               " Always show at least n lines above/below the cursor. set to a large value causes the cursor to stay in the middle line when possible.
+set sidescrolloff=5             " The minimal number of screen columns to keep to the left and to the right of the cursor.
 set cursorline                  " Highlight the current line.
 set cc=80,120                   " Setup a ruler at specific columns.
 set ruler                       " Show a ruler on the right side of the status line.
