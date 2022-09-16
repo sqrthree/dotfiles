@@ -39,6 +39,9 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+     " Makes :set list 
 set autoread                    " Autoload file changes.
 set splitbelow                  " Horizontal splits will automatically be below.
 set splitright                  " Vertical splits will automatically be to the right.
+set foldmethod=indent           " Fold based on indention levels.
+set foldnestmax=3               " Only fold up to three nested levels.
+set nofoldenable                " Disable folding by default.
 
 " Map the leader key to ",".
 let mapleader = ","
