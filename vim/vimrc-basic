@@ -13,6 +13,7 @@ filetype indent on              " Load file-specific indentation.
 
 # Basic Configurations.
 set encoding=utf-8              " The encoding displayed.
+set display+=lastline           " Always try to show a paragraph’s last line.
 set background=dark             " Tell vim what the background color looks like.
 set backspace=indent,eol,start  " Backspace through anything in insert mode.
 set number                      " Always show line number.
