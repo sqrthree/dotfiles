@@ -1,9 +1,9 @@
-#
-# This file is designed to work with vim natively, without any plugins.
-# Out-of-the-box is the main principles.
-#
-# Use :help 'option' to see the documentation for the given option.
-#
+"
+" This file is designed to work with vim natively, without any plugins.
+" Out-of-the-box is the main principles.
+"
+" Use :help 'option' to see the documentation for the given option.
+"
 
 syntax enable                   " Disable syntax highlighting.
 
@@ -11,7 +11,7 @@ filetype on                     " Enable filetype detection.
 filetype plugin on              " Load file-specific plugins.
 filetype indent on              " Load file-specific indentation.
 
-# Basic Configurations.
+" Basic Configurations.
 set encoding=utf-8              " The encoding displayed.
 set display+=lastline           " Always try to show a paragraph’s last line.
 set background=dark             " Tell vim what the background color looks like.
