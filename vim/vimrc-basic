@@ -32,6 +32,7 @@ set showmatch                   " Enable a special bracket highlighting while in
 set matchtime=3                 " To speed things up.
 set incsearch                   " Start searching before pressing enter.
 set hlsearch                    " Highlight all matches in search pattern.
+set ignorecase                  " Makes pattern matching case-insensitive.
 set smartcase                   " Works as case-insensitive if you only use lowercase letters; otherwise, it will search in case-sensitive mode.
 set complete-=i                 " Limit the files searched for auto-completes.
 set list                        " Show hidden characters such as tab, trailing space.
