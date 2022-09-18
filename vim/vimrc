@@ -40,7 +40,7 @@ noremap L $
 
 "
 " Power Vim with plugins.
-" 
+"
 " The plugins are managed by [vim-plug](junegunn/vim-plug).
 " Automatic installation is enabled by default.
 " If you need to install it manually, you can run the following script (see https://github.com/junegunn/vim-plug#installation to get more details).
