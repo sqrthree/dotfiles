@@ -130,5 +130,8 @@ let g:ale_linters = {
 let g:EasyMotion_smartcase = 1      " Turn on case-insensitive feature
 
 " junegunn/vim-easy-align
-xmap ga <Plug>(EasyAlign)           " Start interactive EasyAlign in visual mode (e.g. vipga)
-nmap ga <Plug>(EasyAlign)           " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+  " The following map configuration can only work in a separate line.
+  " Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+  " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
