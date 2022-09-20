@@ -4,13 +4,13 @@ local config = require('plugins.completion.config')
 -- Collection of configurations for built-in LSP client.
 completion['neovim/nvim-lspconfig'] = {
   -- event = 'BufReadPre',
-	config = config.nvim_lsp,
+  config = config.nvim_lsp,
 }
 
 -- Snippets.
 completion['L3MON4D3/LuaSnip'] = {
   -- event = 'InsertEnter',
-	config = config.luasnip,
+  config = config.luasnip,
   requires = 'rafamadriz/friendly-snippets',
 }
 
