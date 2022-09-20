@@ -6,6 +6,10 @@ editor['junegunn/vim-easy-align'] = {
   opt = true,
   cmd = 'EasyAlign',
 }
+editor['prettier/vim-prettier'] = {
+  opt = true,
+  run = 'yarn install --frozen-lockfile --production',
+}
 
 -- Highlights
 editor['nvim-treesitter/nvim-treesitter'] = {
