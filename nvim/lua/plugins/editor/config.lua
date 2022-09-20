@@ -90,4 +90,17 @@ function config.neogen()
   require('neogen').setup {}
 end
 
+function config.ale()
+  vim.api.nvim_set_var('ale_sign_error', '🚨')
+  vim.api.nvim_set_var('ale_sign_warning', '⚠️')
+  vim.api.nvim_set_var('ale_lint_on_enter', 0)     -- Don not run linters on opening a file.
+  vim.api.nvim_set_var('ale_linters_explicit', 1)  -- Only run linters named in ale_linters settings
+  vim.api.nvim_set_var('ale_linters', {
+    javascript = { 'cspell', 'eslint', 'tsserver' },
+    jsx        = { 'cspell', 'eslint', 'tsserver' },
+    typescript = { 'cspell', 'eslint', 'tsserver', 'typecheck'},
+    tsx        = { 'cspell', 'eslint', 'tsserver', 'typecheck'},
+  })
+end
+
 return config

@@ -15,10 +15,10 @@ editor['prettier/vim-prettier'] = {
 
 -- Highlights
 editor['nvim-treesitter/nvim-treesitter'] = {
-	opt = true,
+  opt = true,
   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-	event = 'BufReadPost',
-	config = config.nvim_treesitter,
+  event = 'BufReadPost',
+  config = config.nvim_treesitter,
 }
 editor['nvim-treesitter/nvim-treesitter-refactor'] = {
   opt = true,
@@ -27,6 +27,13 @@ editor['nvim-treesitter/nvim-treesitter-refactor'] = {
 editor['nvim-treesitter/nvim-treesitter-textobjects'] = {
   opt = true,
   after = 'nvim-treesitter',
+}
+
+-- Linting
+editor['dense-analysis/ale'] = {
+  opt = true,
+  event = 'BufReadPost',
+  config = config.ale,
 }
 
 -- Documentation
