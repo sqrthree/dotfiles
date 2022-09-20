@@ -18,7 +18,7 @@ editor['nvim-treesitter/nvim-treesitter-refactor'] = {
   opt = true,
   after = 'nvim-treesitter',
 }
-editor['nvim-treesitter/nvim-treesitter-textsubjects'] = {
+editor['nvim-treesitter/nvim-treesitter-textobjects'] = {
   opt = true,
   after = 'nvim-treesitter',
 }
