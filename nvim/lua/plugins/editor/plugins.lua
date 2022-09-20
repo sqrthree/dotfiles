@@ -17,6 +17,7 @@ editor['junegunn/vim-easy-align'] = {
 editor['prettier/vim-prettier'] = {
   opt = true,
   event = 'BufReadPre',
+  config = config.prettier,
   run = 'yarn install --frozen-lockfile --production',
 }
 

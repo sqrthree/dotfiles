@@ -1,5 +1,18 @@
 local config = {}
 
+function config.prettier()
+  vim.api.nvim_set_var('prettier#autoformat', 0)
+
+  -- Running before saving async.
+  vim.api.nvim_create_autocmd(
+    { 'BufWritePre' },
+    {
+      pattern = { '*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx', '*.css', '*.less', '*.scss', '*.json', '*.graphql', '*.md', '*.vue', '*.yaml', '*.html' },
+      command = "PrettierAsync"
+    }
+  )
+end
+
 function config.nvim_treesitter()
   require('nvim-treesitter.install').prefer_git = true
 
