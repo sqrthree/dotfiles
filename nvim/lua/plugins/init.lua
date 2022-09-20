@@ -126,7 +126,7 @@ function plugins.load_compile()
   if vim.fn.filereadable(packer_compiled) == 1 then
     require('_packer_compiled')
   else
-    assert('Missing packer compile file. Please run PackerCompile Or PackerInstall to fix')
+    vim.notify('Missing packer compile file. Please run PackerCompile Or PackerInstall to fix', vim.log.levels.WARN, { title = 'Warning!' })
   end
 
   -- Commands
