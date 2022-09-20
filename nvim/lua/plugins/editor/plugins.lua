@@ -27,6 +27,10 @@ editor['nvim-treesitter/nvim-treesitter'] = {
   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   event = 'BufReadPost',
   config = config.nvim_treesitter,
+  requires = {
+    'nvim-treesitter/nvim-treesitter-refactor',
+    'nvim-treesitter/nvim-treesitter-textobjects',
+  }
 }
 editor['nvim-treesitter/nvim-treesitter-refactor'] = {
   opt = true,
