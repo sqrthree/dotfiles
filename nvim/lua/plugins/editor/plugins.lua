@@ -4,6 +4,7 @@ local config = require('plugins.editor.config')
 -- Prettification
 editor['junegunn/vim-easy-align'] = {
   opt = true,
+  event = 'BufReadPre',
   cmd = 'EasyAlign',
 }
 editor['prettier/vim-prettier'] = {
