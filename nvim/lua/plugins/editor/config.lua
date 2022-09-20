@@ -17,18 +17,49 @@ function config.nvim_treesitter()
     end
   })
 
-	require('nvim-treesitter.configs').setup({
-		ensure_installed = {
-			'bash',
-			'javascript',
-			'typescript',
+  require('nvim-treesitter.configs').setup({
+    ensure_installed = {
+      'bash',
+      'javascript',
+      'typescript',
       'tsx',
-			'json',
-			'yaml',
-			'go',
-			'rust',
-		},
-		highlight = { enable = true, },
+      'json',
+      'yaml',
+      'go',
+      'rust',
+    },
+    highlight = { enable = true, },
+    textobjects = {
+      select = {
+        enable = true,
+        keymaps = {
+          ["af"] = "@function.outer",
+          ["if"] = "@function.inner",
+          ["ac"] = "@class.outer",
+          ["ic"] = "@class.inner",
+        },
+      },
+      move = {
+        enable = true,
+        set_jumps = true, -- whether to set jumps in the jumplist
+        goto_next_start = {
+          ["]["] = "@function.outer",
+          ["]m"] = "@class.outer",
+        },
+        goto_next_end = {
+          ["]]"] = "@function.outer",
+          ["]M"] = "@class.outer",
+        },
+        goto_previous_start = {
+          ["[["] = "@function.outer",
+          ["[m"] = "@class.outer",
+        },
+        goto_previous_end = {
+          ["[]"] = "@function.outer",
+          ["[M"] = "@class.outer",
+        },
+      },
+    },
     refactor = {
       highlight_definitions = {
         enable = true,
@@ -52,7 +83,7 @@ function config.nvim_treesitter()
         },
       },
     },
-	})
+  })
 end
 
 return config

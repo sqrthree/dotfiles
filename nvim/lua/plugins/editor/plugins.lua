@@ -13,10 +13,14 @@ editor['nvim-treesitter/nvim-treesitter'] = {
   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
 	event = 'BufReadPost',
 	config = config.nvim_treesitter,
-  requires = {
-    { 'nvim-treesitter/nvim-treesitter-refactor', },
-    { 'RRethy/nvim-treesitter-textsubjects', },
-  },
+}
+editor['nvim-treesitter/nvim-treesitter-refactor'] = {
+  opt = true,
+  after = 'nvim-treesitter',
+}
+editor['nvim-treesitter/nvim-treesitter-textsubjects'] = {
+  opt = true,
+  after = 'nvim-treesitter',
 }
 
 return editor
