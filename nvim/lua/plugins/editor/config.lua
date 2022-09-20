@@ -112,4 +112,8 @@ function config.ale()
   })
 end
 
+function config.easymotion()
+  vim.api.nvim_set_var('EasyMotion_smartcase', 1)
+end
+
 return config

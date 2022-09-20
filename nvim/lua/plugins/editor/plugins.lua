@@ -1,6 +1,13 @@
 local editor = {}
 local config = require('plugins.editor.config')
 
+-- Motions
+editor['easymotion/vim-easymotion'] = {
+  opt = true,
+  event = 'BufReadPre',
+  config = config.easymotion,
+}
+
 -- Prettification
 editor['junegunn/vim-easy-align'] = {
   opt = true,

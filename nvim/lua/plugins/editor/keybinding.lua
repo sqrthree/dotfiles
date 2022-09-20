@@ -1,6 +1,6 @@
 local map = vim.api.nvim_set_keymap
 
--- Plugin EasyAlign
+-- Plugin vim-easy-align
 local easy_align = function()
   local options = { silent = true, noremap = false }
 
@@ -9,3 +9,13 @@ local easy_align = function()
 end
 
 easy_align()
+
+-- Plugin vim-easymotion
+local easymotion = function()
+  local options = { silent = true, noremap = true }
+
+  map('n', 's', '<Plug>(easymotion-s2)', options)
+  map('n', 't', '<Plug>(easymotion-t2)', options)
+end
+
+easymotion()
