@@ -23,4 +23,11 @@ editor['nvim-treesitter/nvim-treesitter-textsubjects'] = {
   after = 'nvim-treesitter',
 }
 
+-- Documentation
+editor['danymat/neogen'] = {
+  config = config.neogen,
+  keys = { '<localleader>d', '<localleader>df', '<localleader>dc' },
+  requires = 'nvim-treesitter',
+}
+
 return editor

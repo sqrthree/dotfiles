@@ -86,4 +86,8 @@ function config.nvim_treesitter()
   })
 end
 
+function config.neogen()
+  require('neogen').setup {}
+end
+
 return config
