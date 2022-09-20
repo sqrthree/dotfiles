@@ -48,6 +48,14 @@ editor['dense-analysis/ale'] = {
   config = config.ale,
 }
 
+-- Indentation guides
+editor['lukas-reineke/indent-blankline.nvim'] = {
+  opt = true,
+  event = 'BufReadPost',
+  config = config.blankline,
+  after = 'nvim-treesitter',
+}
+
 -- Documentation
 editor['danymat/neogen'] = {
   config = config.neogen,

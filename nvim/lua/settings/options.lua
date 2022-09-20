@@ -16,4 +16,5 @@ opt.showmatch      = true               -- Enable a special bracket highlighting
 opt.ignorecase     = true               -- Makes pattern matching case-insensitive.
 opt.smartcase      = true               -- Works as case-insensitive if you only use lowercase letters; otherwise, it will search in case-sensitive mode.
 opt.splitbelow     = true               -- Horizontal splits will automatically be below
-opt.splitright     = true               -- Vertical splits will automatically be to the right
+opt.splitright     = true               -- Vertical splits will automatically be to the right.
+opt.list           = true               -- Show hidden characters such as tab, trailing space.
