@@ -48,7 +48,7 @@ local lsp_flags = {
 
 -- Enable the language server for js/ts files:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver
-lspconfig.tsserver.setup {
+lspconfig.tsserver.setup({
   capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
@@ -57,4 +57,4 @@ lspconfig.tsserver.setup {
       disableSuggestions = true,
     },
   },
-}
+})

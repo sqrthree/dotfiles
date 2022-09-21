@@ -100,7 +100,7 @@ function config.nvim_treesitter()
 end
 
 function config.neogen()
-  require('neogen').setup {}
+  require('neogen').setup()
 end
 
 function config.ale()
@@ -139,11 +139,11 @@ function config.blankline()
   vim.api.nvim_set_var('indent_blankline_show_first_indent_level', false)
   vim.api.nvim_set_var('indent_blankline_show_trailing_blankline_indent', false)
 
-  require('indent_blankline').setup {
+  require('indent_blankline').setup({
     space_char_blankline = ' ',
     show_current_context = true,
     show_current_context_start = true,
-  }
+  })
 end
 
 function config.telescope()

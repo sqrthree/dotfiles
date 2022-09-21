@@ -5,7 +5,7 @@ function config.lualine()
     return str:sub(1,1)
   end
 
-  require('lualine').setup {
+  require('lualine').setup({
     options = {
       theme = 'solarized_dark',
       fmt = string.lower,
@@ -24,7 +24,7 @@ function config.lualine()
         }
       },
     }
-  }
+  })
 end
 
 function config.tree()
