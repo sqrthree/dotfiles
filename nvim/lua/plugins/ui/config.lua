@@ -28,9 +28,6 @@ function config.lualine()
 end
 
 function config.tree()
-  vim.api.nvim_set_var('loaded', 1)
-  vim.api.nvim_set_var('loaded_netrwPlugin', 1)
-
   require('nvim-tree').setup({
     sort_by = 'case_sensitive',
     view = {
