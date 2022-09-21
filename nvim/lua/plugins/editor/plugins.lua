@@ -79,7 +79,7 @@ editor['nvim-telescope/telescope.nvim'] = {
 }
 
 -- File Explorer
-ui['kyazdani42/nvim-tree.lua'] = {
+editor['kyazdani42/nvim-tree.lua'] = {
   opt = true,
   config = config.tree,
   requires = { 'kyazdani42/nvim-web-devicons', opt = true },
