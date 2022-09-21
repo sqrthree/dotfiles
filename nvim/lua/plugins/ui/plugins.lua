@@ -12,4 +12,12 @@ ui['nvim-lualine/lualine.nvim'] = {
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
 
+-- File Explorer
+ui['kyazdani42/nvim-tree.lua'] = {
+  opt = true,
+  config = config.tree,
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  cmd = { 'NvimTreeToggle', 'NvimTreeFocus', 'NvimTreeFindFile', 'NvimTreeCollapse', },
+}
+
 return ui
