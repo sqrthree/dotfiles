@@ -25,7 +25,7 @@ editor['prettier/vim-prettier'] = {
 editor['nvim-treesitter/nvim-treesitter'] = {
   opt = true,
   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  event = 'BufReadPost',
+  event = { 'BufWinEnter', 'BufNewFile' },
   config = config.nvim_treesitter,
   requires = {
     'nvim-treesitter/nvim-treesitter-refactor',
@@ -51,7 +51,7 @@ editor['dense-analysis/ale'] = {
 -- Indentation guides
 editor['lukas-reineke/indent-blankline.nvim'] = {
   opt = true,
-  event = 'BufReadPost',
+  event = { 'BufWinEnter', 'BufNewFile' },
   config = config.blankline,
   after = 'nvim-treesitter',
 }

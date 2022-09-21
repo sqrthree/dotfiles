@@ -41,7 +41,13 @@ function config.nvim_treesitter()
       'go',
       'rust',
     },
-    highlight = { enable = true, },
+    highlight = {
+      enable = true,
+      use_languagetree = true,
+    },
+    indent = {
+      enable = true,
+    },
     textobjects = {
       select = {
         enable = true,

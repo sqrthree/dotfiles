@@ -18,3 +18,4 @@ opt.smartcase      = true               -- Works as case-insensitive if you only
 opt.splitbelow     = true               -- Horizontal splits will automatically be below
 opt.splitright     = true               -- Vertical splits will automatically be to the right.
 opt.list           = true               -- Show hidden characters such as tab, trailing space.
+opt.foldenable     = false              -- Disable folding by default.
