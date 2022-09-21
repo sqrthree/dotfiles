@@ -8,7 +8,7 @@ function config.prettier()
     { 'BufWritePre' },
     {
       pattern = { '*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx', '*.css', '*.less', '*.scss', '*.json', '*.graphql', '*.md', '*.vue', '*.yaml', '*.html' },
-      command = "PrettierAsync"
+      command = 'PrettierAsync'
     }
   )
 end
@@ -46,30 +46,30 @@ function config.nvim_treesitter()
       select = {
         enable = true,
         keymaps = {
-          ["af"] = "@function.outer",
-          ["if"] = "@function.inner",
-          ["ac"] = "@class.outer",
-          ["ic"] = "@class.inner",
+          ['af'] = '@function.outer',
+          ['if'] = '@function.inner',
+          ['ac'] = '@class.outer',
+          ['ic'] = '@class.inner',
         },
       },
       move = {
         enable = true,
         set_jumps = true, -- whether to set jumps in the jumplist
         goto_next_start = {
-          ["]["] = "@function.outer",
-          ["]m"] = "@class.outer",
+          [']['] = '@function.outer',
+          [']m'] = '@class.outer',
         },
         goto_next_end = {
-          ["]]"] = "@function.outer",
-          ["]M"] = "@class.outer",
+          [']]'] = '@function.outer',
+          [']M'] = '@class.outer',
         },
         goto_previous_start = {
-          ["[["] = "@function.outer",
-          ["[m"] = "@class.outer",
+          ['[['] = '@function.outer',
+          ['[m'] = '@class.outer',
         },
         goto_previous_end = {
-          ["[]"] = "@function.outer",
-          ["[M"] = "@class.outer",
+          ['[]'] = '@function.outer',
+          ['[M'] = '@class.outer',
         },
       },
     },
@@ -130,7 +130,7 @@ function config.easymotion()
 end
 
 function config.blankline()
-  vim.opt.listchars:append "space:⋅"
+  vim.opt.listchars:append 'space:⋅'
 
   vim.api.nvim_set_var('indent_blankline_char_list', { '|', '¦', '┆', '┊' })
   vim.api.nvim_set_var('indent_blankline_use_treesitter', true)
@@ -139,8 +139,8 @@ function config.blankline()
   vim.api.nvim_set_var('indent_blankline_show_first_indent_level', false)
   vim.api.nvim_set_var('indent_blankline_show_trailing_blankline_indent', false)
 
-  require("indent_blankline").setup {
-    space_char_blankline = " ",
+  require('indent_blankline').setup {
+    space_char_blankline = ' ',
     show_current_context = true,
     show_current_context_start = true,
   }
