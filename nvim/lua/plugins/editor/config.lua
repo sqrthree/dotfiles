@@ -146,4 +146,19 @@ function config.blankline()
   }
 end
 
+function config.telescope()
+  local actions = require('telescope.actions')
+
+  require('telescope').setup({
+    defaults = {
+      mappings = {
+        i = {
+          ['<C-o>'] = actions.select_vertical,
+          ['<C-S-o>'] = actions.select_tab,
+        }
+      }
+    }
+  })
+end
+
 return config

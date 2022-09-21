@@ -63,4 +63,19 @@ editor['danymat/neogen'] = {
   requires = 'nvim-treesitter',
 }
 
+-- Search
+editor['nvim-lua/plenary.nvim'] = {
+  opt = false,
+}
+editor['nvim-telescope/telescope.nvim'] = {
+  opt = true,
+  module = 'telescope',
+  cmd = 'Telescope',
+  config = config.telescope,
+  requires = {
+    { 'nvim-lua/plenary.nvim', opt = false },
+    { 'nvim-lua/popup.nvim', opt = true },
+  },
+}
+
 return editor
