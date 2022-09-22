@@ -70,6 +70,13 @@ editor['numToStr/Comment.nvim'] = {
   config = config.comment,
 }
 
+-- Autopairs
+editor['windwp/nvim-autopairs'] = {
+  opt = true,
+  event = 'InsertEnter',
+  config = config.autopairs,
+}
+
 -- Search
 editor['nvim-lua/plenary.nvim'] = {
   opt = false,

@@ -156,6 +156,10 @@ function config.comment()
   require('Comment').setup()
 end
 
+function config.autopairs()
+  require("nvim-autopairs").setup()
+end
+
 function config.telescope()
   local actions = require('telescope.actions')
 
