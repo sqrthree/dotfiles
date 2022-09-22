@@ -17,5 +17,6 @@ opt.ignorecase     = true               -- Makes pattern matching case-insensiti
 opt.smartcase      = true               -- Works as case-insensitive if you only use lowercase letters; otherwise, it will search in case-sensitive mode.
 opt.splitbelow     = true               -- Horizontal splits will automatically be below
 opt.splitright     = true               -- Vertical splits will automatically be to the right.
-opt.list           = true               -- Show hidden characters such as tab, trailing space.
 opt.foldenable     = false              -- Disable folding by default.
+opt.list           = true               -- Show hidden characters such as tab, trailing space.
+opt.listchars      = 'tab:» ,trail:~,extends:→,precedes:←,nbsp:+,lead:⋅,multispace:⋅' -- Makes :set list (visible whitespace) prettier.

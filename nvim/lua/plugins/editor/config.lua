@@ -136,8 +136,6 @@ function config.easymotion()
 end
 
 function config.blankline()
-  vim.opt.listchars:append 'space:⋅'
-
   vim.api.nvim_set_var('indent_blankline_char_list', { '¦', '┆', '┊' })
   vim.api.nvim_set_var('indent_blankline_use_treesitter', true)
   vim.api.nvim_set_var('indentLine_faster', 1)
