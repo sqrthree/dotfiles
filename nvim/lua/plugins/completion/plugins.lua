@@ -24,19 +24,32 @@ completion['hrsh7th/nvim-cmp'] = {
   }
 }
 completion['hrsh7th/cmp-nvim-lsp'] = {
+  opt = true,
   after = 'nvim-cmp',
 }
 completion['hrsh7th/cmp-buffer'] = {
+  opt = true,
   after = 'cmp-nvim-lsp'
 }
 completion['hrsh7th/cmp-path'] = {
-  after = 'cmp-buffer'
+  opt = true,
+  after = 'cmp-buffer',
 }
 completion['hrsh7th/cmp-cmdline'] = {
+  opt = true,
   after = 'cmp-path'
 }
 completion['saadparwaiz1/cmp_luasnip'] = {
-  after = 'cmp-cmdline'
+  opt = true,
+  after = 'cmp-cmdline',
+}
+completion['hrsh7th/cmp-nvim-lsp-document-symbol'] = {
+  opt = true,
+  after = 'cmp_luasnip',
+}
+completion['hrsh7th/cmp-nvim-lsp-signature-help'] = {
+  opt = true,
+  after = 'cmp-nvim-lsp-document-symbol',
 }
 
 -- Snippets.
