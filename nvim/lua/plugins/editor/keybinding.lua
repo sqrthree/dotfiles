@@ -32,3 +32,15 @@ local telescope = function()
 end
 
 telescope()
+
+-- Plugin Comment
+local comment = function()
+  local options = { silent = true, noremap = true }
+
+  map('n', '<leader>c', '<Plug>(comment_toggle_linewise_current)', options)
+  map('n', '<leader>bc', '<Plug>(comment_toggle_blockwise_current)', options)
+  map('x', '<leader>c', '<Plug>(comment_toggle_linewise_visual)', options)
+  map('x', '<leader>bc', '<Plug>(comment_toggle_blockwise_visual)', options)
+end
+
+comment()

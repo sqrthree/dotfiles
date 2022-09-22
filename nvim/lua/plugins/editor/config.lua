@@ -152,6 +152,10 @@ function config.blankline()
   })
 end
 
+function config.comment()
+  require('Comment').setup()
+end
+
 function config.telescope()
   local actions = require('telescope.actions')
 

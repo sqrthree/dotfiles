@@ -63,6 +63,13 @@ editor['danymat/neogen'] = {
   requires = 'nvim-treesitter',
 }
 
+-- Comment
+editor['numToStr/Comment.nvim'] = {
+  opt = true,
+  event = { 'BufReadPost', 'BufNewFile' },
+  config = config.comment,
+}
+
 -- Search
 editor['nvim-lua/plenary.nvim'] = {
   opt = false,
