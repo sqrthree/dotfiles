@@ -189,7 +189,8 @@ function config.tree()
       adaptive_size = true,
       mappings = {
         list = {
-          { key = 'u', action = 'dir_up' },
+          { key = 's', action = 'split' },
+          { key = 'S', action = 'vsplit' },
         },
       },
     },
