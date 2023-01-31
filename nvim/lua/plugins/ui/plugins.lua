@@ -9,7 +9,7 @@ ui['nvim-lualine/lualine.nvim'] = {
   opt = true,
   event = 'BufWinEnter',
   config = config.lualine,
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 }
 
 return ui

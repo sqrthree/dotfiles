@@ -93,10 +93,10 @@ editor['nvim-telescope/telescope.nvim'] = {
 }
 
 -- File Explorer
-editor['kyazdani42/nvim-tree.lua'] = {
+editor['nvim-tree/nvim-tree.lua'] = {
   opt = true,
   config = config.tree,
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   cmd = { 'NvimTreeToggle', 'NvimTreeFocus', 'NvimTreeFindFile', 'NvimTreeCollapse', },
 }
 
