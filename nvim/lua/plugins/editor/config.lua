@@ -40,6 +40,7 @@ function config.nvim_treesitter()
       'yaml',
       'go',
       'rust',
+      'lua',
     },
     highlight = {
       enable = true,
