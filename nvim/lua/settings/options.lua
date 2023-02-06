@@ -21,3 +21,4 @@ opt.foldenable     = false              -- Disable folding by default.
 opt.list           = true               -- Show hidden characters such as tab, trailing space.
 opt.listchars      = 'tab:» ,trail:~,extends:→,precedes:←,nbsp:+' -- Makes :set list (visible whitespace) prettier.
 opt.mouse          = ''                 -- Disable mouse support.
+opt.history        = 1000               -- Set the command-lines that you enter are remembered in a history table.
