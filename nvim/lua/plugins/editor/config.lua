@@ -1,16 +1,19 @@
 local config = {}
 
 function config.prettier()
-  vim.api.nvim_set_var('prettier#autoformat', 0)
+  -- Setup autoformatting files based on whether a config file can be found in
+  -- the current directory or any parent directory.
+  vim.api.nvim_set_var('prettier#autoformat_require_pragma', 0)
+  vim.api.nvim_set_var('prettier#autoformat_config_present', 1)
 
   -- Running before saving async.
-  vim.api.nvim_create_autocmd(
-    { 'BufWritePre' },
-    {
-      pattern = { '*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx', '*.css', '*.less', '*.scss', '*.json', '*.graphql', '*.md', '*.vue', '*.yaml', '*.html' },
-      command = 'PrettierAsync'
-    }
-  )
+  -- vim.api.nvim_create_autocmd(
+  --   { 'BufWritePre' },
+  --   {
+  --     pattern = { '*.js', '*.jsx', '*.mjs', '*.ts', '*.tsx', '*.css', '*.less', '*.scss', '*.json', '*.graphql', '*.md', '*.vue', '*.yaml', '*.html' },
+  --     command = 'PrettierAsync'
+  --   }
+  -- )
 end
 
 function config.nvim_treesitter()
