@@ -13,9 +13,13 @@ log () {
 
 log "[vim] sync changes..."
 cp ~/.vimrc ./vim/vimrc
-log "[vim] done"
+log "[vim] ok"
 
 log "[nvim] sync changes..."
 rm -rf ./nvim
 cp -r ~/.config/nvim ./nvim
 log "[nvim] ok"
+
+log "[alacritty] sync changes..."
+cp  ~/.config/alacritty/alacritty.yml ./alacritty/alacritty.yml
+log "[alacritty] ok"

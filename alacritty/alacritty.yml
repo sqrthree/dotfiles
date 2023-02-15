@@ -1,0 +1,22 @@
+# Configuration for Alacritty.
+#
+# See https://github.com/alacritty/alacritty/blob/master/alacritty.yml to get
+# more details.
+
+import:
+  # Set theme, https://github.com/alacritty/alacritty-theme
+  - ~/.config/alacritty/themes/themes/solarized_dark.yaml
+
+window:
+  opacity: 0.85
+  padding:
+    x: 16
+    y: 28
+  dynamic_padding: false
+  decorations: transparent
+
+font:
+  size: 13.0
+
+cursor:
+  blinking: On
