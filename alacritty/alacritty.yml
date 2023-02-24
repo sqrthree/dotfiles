@@ -9,6 +9,9 @@ import:
 
 window:
   opacity: 0.85
+  dimensions:
+    columns: 140
+    lines: 40
   padding:
     x: 16
     y: 28
@@ -17,6 +20,13 @@ window:
 
 font:
   size: 13.0
+  normal:
+    family: "FiraCode Nerd Font Mono"
+  bold:
+    family: "FiraCode Nerd Font Mono"
+  italic:
+    family: "FiraCode Nerd Font Mono"
 
 cursor:
-  blinking: On
+  style:
+    shape: Block
