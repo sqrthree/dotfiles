@@ -6,6 +6,9 @@ function config.prettier()
   vim.api.nvim_set_var('prettier#autoformat_require_pragma', 0)
   vim.api.nvim_set_var('prettier#autoformat_config_present', 1)
 
+  -- Force the command `:Prettier` to async.
+  vim.api.nvim_set_var('prettier#exec_cmd_async', 1)
+
   -- Running before saving async.
   -- vim.api.nvim_create_autocmd(
   --   { 'BufWritePre' },
