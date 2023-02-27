@@ -7,7 +7,7 @@ function config.lualine()
 
   require('lualine').setup({
     options = {
-      theme = 'solarized_dark',
+      theme = 'nightfox',
       fmt = string.lower,
     },
     sections = {

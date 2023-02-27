@@ -76,4 +76,6 @@ end
 load_plugins()
 
 -- Enable Solarized Colorscheme. Power by https://github.com/altercation/vim-colors-solarized
-vim.cmd [[colorscheme solarized]]
+-- vim.cmd("colorscheme solarized")
+-- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme nightfox")
