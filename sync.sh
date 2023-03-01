@@ -73,6 +73,13 @@ sync_alacritty() {
   ok "alacritty"
 }
 
+# sync tmux configurations.
+sync_tmux() {
+  sync "tmux"
+  cp ~/.tmux.conf ./tmux/tmux.conf
+  ok "tmux"
+}
+
 #
 # Main
 #
@@ -87,10 +94,14 @@ case "$TARGET" in
   "alacritty")
     sync_alacritty
     ;;
+  "tmux")
+    sync_tmux
+    ;;
   "all")
     sync_vim
     sync_nvim
     sync_alacritty
+    sync_tmux
     ;;
   *)
     error "Invalid target"
