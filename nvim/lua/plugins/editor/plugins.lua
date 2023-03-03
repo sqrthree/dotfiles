@@ -4,19 +4,19 @@ local config = require('plugins.editor.config')
 -- Motions
 editor['easymotion/vim-easymotion'] = {
   opt = true,
-  event = 'BufReadPre',
+  event = { 'BufWinEnter', 'BufNewFile'},
   config = config.easymotion,
 }
 
 -- Prettification
 editor['junegunn/vim-easy-align'] = {
   opt = true,
-  event = 'BufReadPre',
+  event = { 'BufWinEnter', 'BufNewFile'},
   cmd = 'EasyAlign',
 }
 editor['prettier/vim-prettier'] = {
   opt = true,
-  event = 'BufReadPre',
+  event = 'BufReadPost',
   config = config.prettier,
   run = 'yarn install --frozen-lockfile --production',
 }
@@ -25,7 +25,7 @@ editor['prettier/vim-prettier'] = {
 editor['nvim-treesitter/nvim-treesitter'] = {
   opt = true,
   run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
-  event = { 'BufWinEnter', 'BufNewFile' },
+  event = { 'BufWinEnter', 'BufNewFile', 'BufReadPost' },
   config = config.nvim_treesitter,
   requires = {
     'nvim-treesitter/nvim-treesitter-refactor',
@@ -51,7 +51,7 @@ editor['dense-analysis/ale'] = {
 -- Indentation guides
 editor['lukas-reineke/indent-blankline.nvim'] = {
   opt = true,
-  event = { 'BufWinEnter', 'BufNewFile' },
+  event = 'BufReadPost',
   config = config.blankline,
   after = 'nvim-treesitter',
 }
@@ -66,7 +66,7 @@ editor['danymat/neogen'] = {
 -- Comment
 editor['numToStr/Comment.nvim'] = {
   opt = true,
-  event = { 'BufReadPost', 'BufNewFile' },
+  event = { 'BufWinEnter', 'BufNewFile' },
   config = config.comment,
 }
 

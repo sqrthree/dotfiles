@@ -3,7 +3,7 @@ local config = require('plugins.tools.config')
 
 tools['lewis6991/gitsigns.nvim'] = {
   opt = true,
-  event = { 'BufReadPost', 'BufNewFile' },
+  event = 'BufReadPost',
   config = config.gitsigns,
 }
 
