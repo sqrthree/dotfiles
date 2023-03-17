@@ -136,6 +136,12 @@ function config.ale()
   -- Don not run linters on opening a file.
   vim.api.nvim_set_var('ale_lint_on_enter', 0)
 
+  -- Disable ALE's LSP functionality entirely.
+  vim.api.nvim_set_var('ale_disable_lsp', 1)
+
+  -- Make ALE display errors and warnings via the Neovim diagnostics API.
+  vim.api.nvim_set_var('ale_use_neovim_diagnostics_api', 1)
+
   -- Only run linters named in ale_linters settings
   vim.api.nvim_set_var('ale_linters_explicit', 1)
 
@@ -193,6 +199,7 @@ function config.tree()
   require('nvim-tree').setup({
     sort_by = 'case_sensitive',
     view = {
+      side = "right",
       adaptive_size = true,
       mappings = {
         list = {
