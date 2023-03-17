@@ -49,6 +49,12 @@ end
 -- Load vim settings.
 require('settings.options')
 
+-- Load neovode related settings only in Neovide.
+-- Document: https://neovide.dev/configuration.html
+if g.neovide then
+  require('settings.neovide')
+end
+
 -- Leader/Local leader mapping
 local leader_map = function()
   g.mapleader = ','
