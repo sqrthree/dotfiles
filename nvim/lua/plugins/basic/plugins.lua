@@ -1,3 +1,0 @@
-local basic = {}
-
-return basic
