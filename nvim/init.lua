@@ -7,12 +7,6 @@ require("plugins")
 
 local g = vim.g
 
--- Load neovode related settings only in Neovide.
--- Document: https://neovide.dev/configuration.html
-if g.neovide then
-  require("settings.neovide")
-end
-
 -- Disable some builtin vim plugins
 local default_plugins = {
   "2html_plugin",
