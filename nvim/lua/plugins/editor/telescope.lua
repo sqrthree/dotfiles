@@ -51,6 +51,7 @@ return {
               ["<C-x>"] = actions.select_horizontal, -- go to file selection as a split
               ["<C-v>"] = actions.select_vertical,   -- open the selection in a new vertical split
               ["<C-t>"] = actions.select_tab,        -- open the selection in a new tab
+              ["<C-c>"] = fb_actions.create,         -- Create file/folder at current path (trailing path separator creates folder)
               ["<Tab>"] = fb_actions.change_cwd,     -- change working directory of nvim to the selected file/folder
             },
             n = {
@@ -59,6 +60,7 @@ return {
               ["x"] = actions.select_horizontal, -- go to file selection as a split
               ["v"] = actions.select_vertical,   -- open the selection in a new vertical split
               ["t"] = actions.select_tab,        -- open the selection in a new tab
+              ["c"] = fb_actions.create,         -- Create file/folder at current path (trailing path separator creates folder)
               ["<Tab>"] = fb_actions.change_cwd, -- change working directory of nvim to the selected file/folder
             },
           }
