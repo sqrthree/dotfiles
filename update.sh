@@ -23,32 +23,32 @@ fi
 
 # log a message with info level.
 info() {
-  echo "\033[34m[*] $1\033[0m"
+  echo -e "\033[34m[*] $1\033[0m"
 }
 
 # log a message with warning level.
 warn() {
-  echo "\033[33m[!] $1\033[0m"
+  echo -e "\033[43m[!] $1\033[0m"
 }
 
 # log a message with success level.
 success() {
-  echo "\033[32m[✔] $1\033[0m"
+  echo -e "\033[32m[✔] $1\033[0m"
 }
 
 # log a message with error level.
 error() {
-  echo "\033[31m[x] $1\033[0m"
+  echo -e "\033[41m[x] $1\033[0m"
 }
 
 # log sync message.
 sync() {
-  info "[$1] sync changes..."
+  info "[$1] Sync changes..."
 }
 
 # log ok message.
 ok() {
-  success "[$1] ok"
+  success "[$1] OK"
 }
 
 # sync vim configurations.
