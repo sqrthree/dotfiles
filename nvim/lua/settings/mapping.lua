@@ -5,6 +5,14 @@ local keymap = vim.keymap
 g.mapleader = ","
 g.maplocalleader = ","
 
+-- Move lines up or down with alt + j/k. Works only with MacOS.
+keymap.set("n", "∆", ":m .+1<CR>==", { noremap = true, silent = true })
+keymap.set("n", "˚", ":m .-2<CR>==", { noremap = true, silent = true })
+keymap.set("i", "∆", "<Esc>:m .+1<CR>==gi", { noremap = true, silent = true })
+keymap.set("i", "˚", "<Esc>:m .-2<CR>==gi", { noremap = true, silent = true })
+keymap.set("v", "∆", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+keymap.set("v", "˚", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
 -- Allow clipboard copy paste in neovim
 keymap.set("", "<D-v>", "+p<CR>", { noremap = true, silent = true })
 keymap.set("!", "<D-v>", "<C-R>+", { noremap = true, silent = true })
