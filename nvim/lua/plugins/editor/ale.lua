@@ -41,4 +41,7 @@ return {
   "dense-analysis/ale",
   event = "BufReadPost",
   config = config,
+  keys = {
+    { "<C-j>", "<Plug>(ale_next_wrap)", mode = "n", noremap = true, silent = true },
+  },
 }
