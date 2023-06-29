@@ -2,6 +2,7 @@ local opt          = vim.opt
 
 -- Settings
 opt.encoding       = "utf-8"                                      -- The encoding displayed
+opt.termguicolors  = true                                         -- Enable truecolor rendering
 opt.background     = "dark"                                       -- Tell vim what the background color looks like
 opt.number         = true                                         -- Always show line number.
 opt.relativenumber = true                                         -- Show the line number relative to the line with the cursor.
