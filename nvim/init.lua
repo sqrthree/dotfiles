@@ -1,10 +1,3 @@
--- Load vim settings.
-require("settings.options")
-require("settings.mapping")
-
--- Load plugins.
-require("plugins")
-
 local g = vim.g
 
 -- Disable some builtin vim plugins
@@ -52,3 +45,10 @@ local default_providers = {
 for _, provider in ipairs(default_providers) do
   g["loaded_" .. provider .. "_provider"] = 0
 end
+
+-- Load vim settings.
+require("settings.options")
+require("settings.mapping")
+
+-- Load plugins.
+require("plugins")
