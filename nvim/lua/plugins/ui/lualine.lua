@@ -5,7 +5,7 @@ local config = function()
 
   require("lualine").setup({
     options = {
-      theme = "nightfox",
+      theme = "tokyonight",
       fmt = string.lower,
     },
     sections = {
@@ -30,7 +30,6 @@ return {
   event = "BufReadPost",
   dependencies = {
     "nvim-tree/nvim-web-devicons",
-    "EdenEast/nightfox.nvim",
   },
   config = config,
 }
