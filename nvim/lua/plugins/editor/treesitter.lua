@@ -26,6 +26,8 @@ local config = function()
       "go",
       "rust",
       "lua",
+      "markdown",
+      "markdown_inline",
     },
     highlight = {
       enable = true,
