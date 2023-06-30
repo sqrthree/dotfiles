@@ -32,6 +32,7 @@
   "telescope-file-browser.nvim": { "branch": "master", "commit": "fc70589a93d7bb42f4671ad75c8628a29995bcbe" },
   "telescope.nvim": { "branch": "master", "commit": "8c998877f1b3d8b56523d0c10eef2191f24fadc1" },
   "tokyonight.nvim": { "branch": "main", "commit": "fd0a005fd8986ec0d98a1938dc570303e8d8444b" },
+  "trouble.nvim": { "branch": "main", "commit": "d99e2abd10808ef91738ce98a5c767e6a51df449" },
   "vim-easy-align": { "branch": "master", "commit": "12dd6316974f71ce333e360c0260b4e1f81169c3" },
   "vim-easymotion": { "branch": "master", "commit": "b3cfab2a6302b3b39f53d9fd2cd997e1127d7878" },
   "vim-prettier": { "branch": "master", "commit": "5e6cca21e12587c02e32a06bf423519eb1e9f1b2" }
