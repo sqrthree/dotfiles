@@ -99,6 +99,10 @@ local config = function()
         },
       },
     },
+    context_commentstring = {
+      enable = true,
+      enable_autocmd = false,
+    },
   })
 end
 
@@ -111,6 +115,7 @@ return {
   dependencies = {
     "nvim-treesitter/nvim-treesitter-refactor",
     "nvim-treesitter/nvim-treesitter-textobjects",
+    "JoosepAlviste/nvim-ts-context-commentstring",
   },
   config = config,
 }
