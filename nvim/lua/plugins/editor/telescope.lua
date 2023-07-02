@@ -1,3 +1,12 @@
+-- Open telescope automatically when opening nvim without any files.
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argv(0) == "" then
+      require("telescope.builtin").find_files()
+    end
+  end,
+})
+
 return {
   "nvim-telescope/telescope.nvim",
   cmd = "Telescope",
@@ -68,6 +77,6 @@ return {
       }
     })
 
-    telescope.load_extension "file_browser"
+    telescope.load_extension("file_browser")
   end,
 }
