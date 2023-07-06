@@ -22,8 +22,8 @@ return {
     { "<leader>fn", "<cmd>Telescope help_tags<cr>",  mode = "n", silent = true, noremap = true },
   },
   config = function()
-    local telescope = require("telescope")
-    local actions = require("telescope.actions")
+    local telescope  = require("telescope")
+    local actions    = require("telescope.actions")
     local fb_actions = require("telescope").extensions.file_browser.actions
 
     telescope.setup({
@@ -64,13 +64,13 @@ return {
               ["<Tab>"] = fb_actions.change_cwd,     -- change working directory of nvim to the selected file/folder
             },
             n = {
-              ["o"] = actions.select_default,    -- open the selection in the current buffer
-              ["s"] = actions.select_horizontal, -- go to file selection as a split
-              ["x"] = actions.select_horizontal, -- go to file selection as a split
-              ["v"] = actions.select_vertical,   -- open the selection in a new vertical split
-              ["t"] = actions.select_tab,        -- open the selection in a new tab
-              ["c"] = fb_actions.create,         -- Create file/folder at current path (trailing path separator creates folder)
-              ["<Tab>"] = fb_actions.change_cwd, -- change working directory of nvim to the selected file/folder
+              ["o"]     = actions.select_default,    -- open the selection in the current buffer
+              ["s"]     = actions.select_horizontal, -- go to file selection as a split
+              ["x"]     = actions.select_horizontal, -- go to file selection as a split
+              ["v"]     = actions.select_vertical,   -- open the selection in a new vertical split
+              ["t"]     = actions.select_tab,        -- open the selection in a new tab
+              ["c"]     = fb_actions.create,         -- Create file/folder at current path (trailing path separator creates folder)
+              ["<Tab>"] = fb_actions.change_cwd,     -- change working directory of nvim to the selected file/folder
             },
           }
         }

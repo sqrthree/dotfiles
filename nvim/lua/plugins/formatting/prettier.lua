@@ -5,7 +5,7 @@ return {
     { "<leader>p", "<cmd>PrettierAsync<cr>", mode = "n", silent = true, noremap = true },
   },
   config = function()
-    -- Disable auto formatting for files without "@format" or "@prettier" tag by 
+    -- Disable auto formatting for files without "@format" or "@prettier" tag by
     -- default. The formatting still can be triggered by commands.
     vim.api.nvim_set_var("prettier#autoformat_require_pragma", 1)
     -- Setup autoformatting files based on whether a config file can be found in

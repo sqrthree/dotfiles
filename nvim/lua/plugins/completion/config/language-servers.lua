@@ -1,7 +1,6 @@
 --
 -- The following configuration is inspired from https://github.com/neovim/nvim-lspconfig#suggested-configuration.
 --
-
 local keymap = vim.keymap
 
 local lspconfig = require("lspconfig")

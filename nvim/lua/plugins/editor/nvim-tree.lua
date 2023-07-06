@@ -1,19 +1,18 @@
 local function on_attach(bufnr)
-  local api = require('nvim-tree.api')
+  local api = require("nvim-tree.api")
 
   local function opts(desc)
-    return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
   -- Default mappings.
   api.config.mappings.default_on_attach(bufnr)
 
   -- Custom mappings.
-  vim.keymap.set('n', 't', api.node.open.tab,                     opts('Open: New Tab'))
-  vim.keymap.set('n', 'v', api.node.open.vertical,                opts('Open: Vertical Split'))
-  vim.keymap.set('n', 's', api.node.open.horizontal,              opts('Open: Horizontal Split'))
-  vim.keymap.set('n', '?', api.tree.toggle_help,                  opts('Help'))
-
+  vim.keymap.set("n", "t", api.node.open.tab, opts("Open: New Tab"))
+  vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
+  vim.keymap.set("n", "s", api.node.open.horizontal, opts("Open: Horizontal Split"))
+  vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 end
 
 local config = function()
@@ -31,7 +30,14 @@ local config = function()
       },
     },
     filters = {
-      custom = { "^.git$", "dist", "node_modules", "package-lock.json", "yarn.lock", "pnpm-lock.yaml" },
+      custom = {
+        "^.git$",
+        "dist",
+        "node_modules",
+        "package-lock.json",
+        "yarn.lock",
+        "pnpm-lock.yaml",
+      },
     },
     update_focused_file = {
       enable = true,
