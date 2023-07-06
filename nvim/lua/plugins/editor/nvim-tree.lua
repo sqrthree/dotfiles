@@ -31,7 +31,7 @@ local config = function()
       },
     },
     filters = {
-      dotfiles = true,
+      custom = { "^.git$", "dist", "node_modules", "package-lock.json", "yarn.lock", "pnpm-lock.yaml" },
     },
     update_focused_file = {
       enable = true,
