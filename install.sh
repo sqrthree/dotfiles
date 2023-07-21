@@ -103,6 +103,7 @@ install_alacritty() {
   backup "alacritty" "$HOME/.config/alacritt"
 
   install "alacritty"
+  mkdir -p ~/.config/alacritty
   cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
   ok "alacritty"
