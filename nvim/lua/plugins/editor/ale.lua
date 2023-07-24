@@ -42,6 +42,8 @@ return {
   event = "BufReadPost",
   config = config,
   keys = {
+    { "<", "<Plug>(ale_previous_wrap)", mode = "n", noremap = true, silent = true },
+    { ">", "<Plug>(ale_next_wrap)", mode = "n", noremap = true, silent = true },
     { "<C-j>", "<Plug>(ale_next_wrap)", mode = "n", noremap = true, silent = true },
   },
 }
