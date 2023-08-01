@@ -2,7 +2,7 @@ return {
   "danymat/neogen",
   dependencies = "nvim-treesitter/nvim-treesitter",
   keys = {
-    { "<leader>n",  ":lua require('neogen').generate()<CR>",                   mode = "n", noremap = true, silent = true },
+    { "<leader>ng", ":lua require('neogen').generate()<CR>",                   mode = "n", noremap = true, silent = true },
     { "<leader>nf", ":lua require('neogen').generate({ type = 'func' })<CR>",  mode = "n", noremap = true, silent = true },
     { "<leader>nc", ":lua require('neogen').generate({ type = 'class' })<CR>", mode = "n", noremap = true, silent = true },
     { "<leader>nt", ":lua require('neogen').generate({ type = 'type' })<CR>",  mode = "n", noremap = true, silent = true },
