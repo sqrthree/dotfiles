@@ -4,7 +4,7 @@
 # more details.
 
 import:
-  # Set theme, https://github.com/alacritty/alacritty-theme
+  # Set theme, theme files can be found from https://github.com/alacritty/alacritty-theme
   - ~/.config/alacritty/themes/themes/solarized_dark.yaml
 
 window:
