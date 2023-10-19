@@ -100,7 +100,7 @@ install_nvim() {
 
 # install alacritty configurations.
 install_alacritty() {
-  backup "alacritty" "$HOME/.config/alacritt"
+  backup "alacritty" "$HOME/.config/alacritty"
 
   install "alacritty"
   mkdir -p ~/.config/alacritty
