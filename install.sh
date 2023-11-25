@@ -106,6 +106,10 @@ install_alacritty() {
   mkdir -p ~/.config/alacritty
   cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+  info "[alacritty] Installing alacritty theme..."
+  info "[alacritty]   for more information on available themes, please see https://github.com/alacritty/alacritty-theme#color-schemes"
+  git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+
   ok "alacritty"
 }
 
