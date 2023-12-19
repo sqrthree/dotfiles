@@ -123,6 +123,18 @@ install_tmux() {
   ok "tmux"
 }
 
+# install starship configurations.
+install_starship() {
+  backup "starship" "$HOME/.config/starship.toml"
+
+  install "starship"
+
+  mkdir -p $HOME/.config
+  cp ./starship/starship.toml $HOME/.config/starship.toml
+
+  ok "starship"
+}
+
 #
 # Main
 #
@@ -142,6 +154,9 @@ case "$TARGET" in
     ;;
   "tmux")
     install_tmux
+    ;;
+  "starship")
+    install_starship
     ;;
   "all")
     install_vim
