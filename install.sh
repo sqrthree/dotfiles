@@ -67,7 +67,7 @@ backup() {
 
 # install vim configurations.
 install_vim() {
-  backup "vim" "$HOME/.vimrc"
+  backup "vim" "~/.vimrc"
 
   install "vim"
   cp ./vim/vimrc ~/.vimrc
@@ -77,7 +77,7 @@ install_vim() {
 
 # install vim basic configurations.
 install_vim_basic() {
-  backup "vim-basic" "$HOME/.vimrc"
+  backup "vim-basic" "~/.vimrc"
 
   install "vim_basic"
   cp ./vim/vimrc-basic ~/.vimrc
@@ -87,10 +87,10 @@ install_vim_basic() {
 
 # install neovim configurations.
 install_nvim() {
-  backup "neovim" "$HOME/.config/nvim"
+  backup "neovim" "~/.config/nvim"
 
   install "neovim"
-  if [ -d "$HOME/.config/nvim" ];then
+  if [ -d "~/.config/nvim" ];then
     rm -r ~/.config/nvim
   fi
   cp -r ./nvim ~/.config/nvim
@@ -100,7 +100,7 @@ install_nvim() {
 
 # install alacritty configurations.
 install_alacritty() {
-  backup "alacritty" "$HOME/.config/alacritty"
+  backup "alacritty" "~/.config/alacritty"
 
   install "alacritty"
   mkdir -p ~/.config/alacritty
@@ -115,7 +115,7 @@ install_alacritty() {
 
 # install tmux configurations.
 install_tmux() {
-  backup "tmux" "$HOME/.tmux.conf"
+  backup "tmux" "~/.tmux.conf"
 
   install "tmux"
   cp ./tmux/tmux.conf ~/.tmux.conf
@@ -125,12 +125,12 @@ install_tmux() {
 
 # install starship configurations.
 install_starship() {
-  backup "starship" "$HOME/.config/starship.toml"
+  backup "starship" "~/.config/starship.toml"
 
   install "starship"
 
-  mkdir -p $HOME/.config
-  cp ./starship/starship.toml $HOME/.config/starship.toml
+  mkdir -p ~/.config
+  cp ./starship/starship.toml ~/.config/starship.toml
 
   ok "starship"
 }
