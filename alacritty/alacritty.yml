@@ -4,8 +4,8 @@
 # more details.
 
 import:
-  # Set theme, theme files can be found from https://github.com/alacritty/alacritty-theme
-  - ~/.config/alacritty/themes/themes/solarized_dark.yaml
+  # Set theme, https://github.com/alacritty/alacritty-theme
+  - ~/.config/alacritty/alacritty-theme/themes/tokyo-night.yaml
 
 window:
   opacity: 0.95
