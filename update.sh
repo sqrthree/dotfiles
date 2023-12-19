@@ -14,7 +14,7 @@ set -e
 TARGET=$1
 
 if [ -z "$TARGET" ]; then
-  TARGET="all"
+	TARGET="all"
 fi
 
 #
@@ -23,61 +23,61 @@ fi
 
 # log a message with info level.
 info() {
-  echo -e "\033[34m[*] $1\033[0m"
+	echo -e "\033[34m[*] $1\033[0m"
 }
 
 # log a message with warning level.
 warn() {
-  echo -e "\033[43m[!] $1\033[0m"
+	echo -e "\033[43m[!] $1\033[0m"
 }
 
 # log a message with success level.
 success() {
-  echo -e "\033[32m[✔] $1\033[0m"
+	echo -e "\033[32m[✔] $1\033[0m"
 }
 
 # log a message with error level.
 error() {
-  echo -e "\033[41m[x] $1\033[0m"
+	echo -e "\033[41m[x] $1\033[0m"
 }
 
 # log sync message.
 sync() {
-  info "[$1] Sync changes..."
+	info "[$1] Sync changes..."
 }
 
 # log ok message.
 ok() {
-  success "[$1] OK"
+	success "[$1] OK"
 }
 
 # sync vim configurations.
 sync_vim() {
-  sync "vim"
-  cp ~/.vimrc ./vim/vimrc
-  ok "vim"
+	sync "vim"
+	cp ~/.vimrc ./vim/vimrc
+	ok "vim"
 }
 
 # sync neovim configurations.
 sync_nvim() {
-  sync "neovim"
-  rm -rf ./nvim
-  cp -r ~/.config/nvim ./nvim
-  ok "neovim"
+	sync "neovim"
+	rm -rf ./nvim
+	cp -r ~/.config/nvim ./nvim
+	ok "neovim"
 }
 
 # sync alacritty configurations.
 sync_alacritty() {
-  sync "alacritty"
-  cp  ~/.config/alacritty/alacritty.yml ./alacritty/alacritty.yml
-  ok "alacritty"
+	sync "alacritty"
+	cp ~/.config/alacritty/alacritty.yml ./alacritty/alacritty.yml
+	ok "alacritty"
 }
 
 # sync tmux configurations.
 sync_tmux() {
-  sync "tmux"
-  cp ~/.tmux.conf ./tmux/tmux.conf
-  ok "tmux"
+	sync "tmux"
+	cp ~/.tmux.conf ./tmux/tmux.conf
+	ok "tmux"
 }
 
 #
@@ -85,26 +85,26 @@ sync_tmux() {
 #
 
 case "$TARGET" in
-  "vim")
-    sync_vim
-    ;;
-  "nvim")
-    sync_nvim
-    ;;
-  "alacritty")
-    sync_alacritty
-    ;;
-  "tmux")
-    sync_tmux
-    ;;
-  "all")
-    sync_vim
-    sync_nvim
-    sync_alacritty
-    sync_tmux
-    ;;
-  *)
-    error "Invalid target"
-    exit 1
-    ;;
+"vim")
+	sync_vim
+	;;
+"nvim")
+	sync_nvim
+	;;
+"alacritty")
+	sync_alacritty
+	;;
+"tmux")
+	sync_tmux
+	;;
+"all")
+	sync_vim
+	sync_nvim
+	sync_alacritty
+	sync_tmux
+	;;
+*)
+	error "Invalid target"
+	exit 1
+	;;
 esac
