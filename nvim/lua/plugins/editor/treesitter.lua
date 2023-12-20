@@ -1,11 +1,6 @@
 local config = function()
   require("nvim-treesitter.install").prefer_git = true
 
-  local parsers = require("nvim-treesitter.parsers").get_parser_configs()
-  for _, p in pairs(parsers) do
-    p.install_info.url = p.install_info.url:gsub("https://github.com/", "git@github.com:")
-  end
-
   -- https://github.com/nvim-treesitter/nvim-treesitter/wiki/Installation#packernvim
   vim.api.nvim_create_autocmd({ "BufEnter", "BufAdd", "BufNew", "BufNewFile", "BufWinEnter" }, {
     group = vim.api.nvim_create_augroup("TS_FOLD_WORKAROUND", {}),
