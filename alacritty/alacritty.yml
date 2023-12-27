@@ -9,6 +9,7 @@ import:
 
 window:
   opacity: 0.95
+  blur: true
   dimensions:
     columns: 140
     lines: 40
