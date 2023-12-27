@@ -13,7 +13,7 @@ set -e
 
 TARGET=$1
 
-if [ -z "$TARGET" ]; then
+if [[ -z "$TARGET" ]]; then
 	TARGET="all"
 fi
 
@@ -54,7 +54,7 @@ ok() {
 # sync vim configurations.
 sync_vim() {
 	sync "vim"
-	cp ~/.vimrc ./vim/vimrc
+	cp $HOME/.vimrc ./vim/vimrc
 	ok "vim"
 }
 
@@ -62,21 +62,21 @@ sync_vim() {
 sync_nvim() {
 	sync "neovim"
 	rm -rf ./nvim
-	cp -r ~/.config/nvim ./nvim
+	cp -r $HOME/.config/nvim ./nvim
 	ok "neovim"
 }
 
 # sync alacritty configurations.
 sync_alacritty() {
 	sync "alacritty"
-	cp ~/.config/alacritty/alacritty.yml ./alacritty/alacritty.yml
+	cp $HOME/.config/alacritty/alacritty.yml ./alacritty/alacritty.yml
 	ok "alacritty"
 }
 
 # sync tmux configurations.
 sync_tmux() {
 	sync "tmux"
-	cp ~/.tmux.conf ./tmux/tmux.conf
+	cp $HOME/.tmux.conf ./tmux/tmux.conf
 	ok "tmux"
 }
 

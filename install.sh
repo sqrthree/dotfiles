@@ -13,7 +13,7 @@ set -e
 TARGET=$1
 NOW=$(date +%Y%m%d%H%M%S)
 
-if [ -z "$TARGET" ]; then
+if [[ -z "$TARGET" ]]; then
 	TARGET="all"
 fi
 
@@ -53,7 +53,7 @@ ok() {
 
 # backup files
 backup() {
-	if [ -e "$2" ]; then
+	if [[ -e $2 ]]; then
 		BACKUP_FILE_NAME="$2.$NOW.backup"
 
 		info "[$1] Detected that the configuration file already exists:"
@@ -67,70 +67,70 @@ backup() {
 
 # install vim configurations.
 install_vim() {
-	backup "vim" "~/.vimrc"
+	backup "vim" "$HOME/.vimrc"
 
 	install "vim"
-	cp ./vim/vimrc ~/.vimrc
+	cp ./vim/vimrc $HOME/.vimrc
 
 	ok "vim"
 }
 
 # install vim basic configurations.
 install_vim_basic() {
-	backup "vim-basic" "~/.vimrc"
+	backup "vim-basic" "$HOME/.vimrc"
 
 	install "vim_basic"
-	cp ./vim/vimrc-basic ~/.vimrc
+	cp ./vim/vimrc-basic $HOME/.vimrc
 
 	ok "vim-basic"
 }
 
 # install neovim configurations.
 install_nvim() {
-	backup "neovim" "~/.config/nvim"
+	backup "neovim" "$HOME/.config/nvim"
 
 	install "neovim"
-	if [ -d "~/.config/nvim" ]; then
-		rm -r ~/.config/nvim
+	if [[ -d $HOME/.config/nvim ]]; then
+		rm -r $HOME/.config/nvim
 	fi
-	cp -r ./nvim ~/.config/nvim
+	cp -r ./nvim $HOME/.config/nvim
 
 	ok "neovim"
 }
 
 # install alacritty configurations.
 install_alacritty() {
-	backup "alacritty" "~/.config/alacritty"
+	backup "alacritty" "$HOME/.config/alacritty"
 
 	install "alacritty"
-	mkdir -p ~/.config/alacritty
-	cp ./alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+	mkdir -p $HOME/.config/alacritty
+	cp ./alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
 	info "[alacritty] Installing alacritty theme..."
 	info "[alacritty]   for more information on available themes, please see https://github.com/alacritty/alacritty-theme#color-schemes"
-	git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/alacritty-theme
+	git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/alacritty-theme
 
 	ok "alacritty"
 }
 
 # install tmux configurations.
 install_tmux() {
-	backup "tmux" "~/.tmux.conf"
+	backup "tmux" "$HOME/.tmux.conf"
 
 	install "tmux"
-	cp ./tmux/tmux.conf ~/.tmux.conf
+	cp ./tmux/tmux.conf $HOME/.tmux.conf
 
 	ok "tmux"
 }
 
 # install starship configurations.
 install_starship() {
-	backup "starship" "~/.config/starship.toml"
+	backup "starship" "$HOME/.config/starship.toml"
 
 	install "starship"
 
-	mkdir -p ~/.config
-	cp ./starship/starship.toml ~/.config/starship.toml
+	mkdir -p $HOME/.config
+	cp ./starship/starship.toml $HOME/.config/starship.toml
 
 	ok "starship"
 }
