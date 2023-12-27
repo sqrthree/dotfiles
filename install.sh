@@ -13,7 +13,7 @@ set -e
 TARGET=$1
 NOW=$(date +%Y%m%d%H%M%S)
 
-if [[ -z "$TARGET" ]]; then
+if [ -z "$TARGET" ]; then
 	TARGET="all"
 fi
 
@@ -53,7 +53,7 @@ ok() {
 
 # backup files
 backup() {
-	if [[ -e $2 ]]; then
+	if [ -e $2 ]; then
 		BACKUP_FILE_NAME="$2.$NOW.backup"
 
 		info "[$1] Detected that the configuration file already exists:"
@@ -90,7 +90,7 @@ install_nvim() {
 	backup "neovim" "$HOME/.config/nvim"
 
 	install "neovim"
-	if [[ -d $HOME/.config/nvim ]]; then
+	if [ -d $HOME/.config/nvim ]; then
 		rm -r $HOME/.config/nvim
 	fi
 	cp -r ./nvim $HOME/.config/nvim

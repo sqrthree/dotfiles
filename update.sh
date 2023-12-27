@@ -13,7 +13,7 @@ set -e
 
 TARGET=$1
 
-if [[ -z "$TARGET" ]]; then
+if [ -z "$TARGET" ]; then
 	TARGET="all"
 fi
 
