@@ -4,14 +4,18 @@ return {
     branch = "osaka",
     lazy = false,
     priority = 1000,
-    opts = function()
-      return {
+    config = function()
+      require("solarized-osaka").setup({
         transparent = true,
         terminal_colors = true,
-      }
-    end,
-    config = function()
-      vim.cmd[[colorscheme solarized-osaka]]
+        dim_inactive = true,
+        styles = {
+          sidebars = 'transparent',
+          floats = 'transparent',
+        },
+      })
+
+      vim.cmd.colorscheme("solarized-osaka")
     end,
   },
 }
