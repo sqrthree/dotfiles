@@ -1,6 +1,12 @@
 local g = vim.g
 local keymap = vim.keymap
 
+local discipline = require("config/discipline")
+
+-- Restrict repeating cursor movement keys to help you train yourself to rely 
+-- on repeaters.
+discipline.cowboy()
+
 -- Leader/Local leader mapping
 g.mapleader = ","
 g.maplocalleader = ","
