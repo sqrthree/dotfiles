@@ -10,8 +10,8 @@ return {
         terminal_colors = true,
         dim_inactive = true,
         styles = {
-          sidebars = 'transparent',
-          floats = 'transparent',
+          sidebars = 'dark',
+          floats = 'dark',
         },
       })
 
