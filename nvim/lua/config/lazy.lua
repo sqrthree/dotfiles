@@ -24,8 +24,11 @@ require("lazy").setup({
   defaults = {
     -- Should plugins be lazy-loaded by default?
     lazy = false,
-    -- Try installing the latest stable version for plugins that support semver
-    version = '*',
+
+    -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
+    -- have outdated releases, which may break your Neovim install.
+    version = false, -- always use the latest git commit
+    -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   spec = {
     { import = "plugins" },
