@@ -5,7 +5,7 @@
 
 import:
   # Set theme, https://github.com/alacritty/alacritty-theme
-  - ~/.config/alacritty/alacritty-theme/themes/tokyo-night.yaml
+  - ~/.config/alacritty/alacritty-theme/themes/solarized_dark.yaml
 
 window:
   opacity: 0.95
