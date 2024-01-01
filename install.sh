@@ -104,7 +104,7 @@ install_alacritty() {
 
 	install "alacritty"
 	mkdir -p $HOME/.config/alacritty
-	cp ./alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+	cp ./alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
 	info "[alacritty] Installing alacritty theme..."
 	info "[alacritty]   for more information on available themes, please see https://github.com/alacritty/alacritty-theme#color-schemes"
