@@ -527,4 +527,33 @@ return {
       },
     },
   },
+  {
+    'stevearc/conform.nvim',
+    dependencies = {
+      "mason.nvim",
+    },
+    lazy = true,
+    cmd = "ConformInfo",
+    keys = {
+      {
+        "<leader>p",
+        function()
+          require("conform").format({
+            async = true,
+            lsp_fallback = true
+          })
+        end,
+        -- mode = { "n", "v" },
+mode = "n", silent = true, noremap = true,
+        desc = "Format buffer",
+      },
+    },
+    opts = {
+      formatters_by_ft = {
+        -- Conform will run multiple formatters sequentially
+        go = { "goimports", "gofmt" },
+        javascript = { "prettier" },
+      },
+    },
+  },
 }
