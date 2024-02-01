@@ -7,6 +7,11 @@
 
 set -e
 
+WORKING_DIR=$(pwd)
+
+# source utils
+source "${WORKING_DIR}"/utils.sh
+
 #
 # Vars
 #
@@ -20,26 +25,6 @@ fi
 #
 # Functions
 #
-
-# log a message with info level.
-info() {
-	echo -e "\033[34m[*] $1\033[0m"
-}
-
-# log a message with warning level.
-warn() {
-	echo -e "\033[43m[!] $1\033[0m"
-}
-
-# log a message with success level.
-success() {
-	echo -e "\033[32m[✔] $1\033[0m"
-}
-
-# log a message with error level.
-error() {
-	echo -e "\033[41m[x] $1\033[0m"
-}
 
 # log sync message.
 sync() {
@@ -104,7 +89,6 @@ case "$TARGET" in
 	sync_tmux
 	;;
 *)
-	error "Invalid target"
-	exit 1
+	fail "Unsupported target: $TARGET"
 	;;
 esac

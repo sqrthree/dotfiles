@@ -6,6 +6,11 @@
 
 set -e
 
+WORKING_DIR=$(pwd)
+
+# source utils
+source "${WORKING_DIR}"/utils.sh
+
 #
 # Vars
 #
@@ -21,26 +26,6 @@ fi
 # Functions
 #
 
-# log a message with info level.
-info() {
-	echo -e "\033[34m[*] $1\033[0m"
-}
-
-# log a message with warning level.
-warn() {
-	echo -e "\033[43m[!] $1\033[0m"
-}
-
-# log a message with success level.
-success() {
-	echo -e "\033[32m[✔] $1\033[0m"
-}
-
-# log a message with error level.
-error() {
-	echo -e "\033[41m[x] $1\033[0m"
-}
-
 # log install message.
 install() {
 	info "[$1] Installing..."
@@ -49,18 +34,6 @@ install() {
 # log ok message.
 ok() {
 	success "[$1] OK"
-}
-
-# Ask Y/n
-ask() {
-	read -p "$1 (Y/n): " resp
-	if [ -z "$resp" ]; then
-		response_lc="y" # empty is Yes
-	else
-		response_lc=$(echo "$resp" | tr '[:upper:]' '[:lower:]') # case insensitive
-	fi
-
-	[ "$response_lc" = "y" ]
 }
 
 # backup files
@@ -220,7 +193,6 @@ case "$TARGET" in
 	install_shell
 	;;
 *)
-	error "Invalid target"
-	exit 1
+	fail "Unsupported target: $TARGET"
 	;;
 esac
