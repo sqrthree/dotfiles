@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 #
 # This script is designed to install and apply configurations.
@@ -49,6 +49,18 @@ install() {
 # log ok message.
 ok() {
 	success "[$1] OK"
+}
+
+# Ask Y/n
+ask() {
+	read -p "$1 (Y/n): " resp
+	if [ -z "$resp" ]; then
+		response_lc="y" # empty is Yes
+	else
+		response_lc=$(echo "$resp" | tr '[:upper:]' '[:lower:]') # case insensitive
+	fi
+
+	[ "$response_lc" = "y" ]
 }
 
 # backup files
@@ -135,6 +147,45 @@ install_starship() {
 	ok "starship"
 }
 
+# Check what shell is being used
+SH="${HOME}/.bashrc"
+ZSHRC="${HOME}/.zshrc"
+SHELL_DIR="$HOME/.shell"
+
+if [ -f "$ZSHRC" ]; then
+	SH="$ZSHRC"
+fi
+
+# install shells
+install_shell() {
+	if [[ ! -d "$SHELL_DIR" ]]; then
+		mkdir $SHELL_DIR
+	fi
+
+	for file in shell/*; do
+		if [[ -f "$file" ]]; then
+			local filename src dst
+			filename=$(basename "$file")
+			src=$(realpath "$file")
+			dst="$SHELL_DIR/$filename"
+
+			if [[ -e "$dst" ]]; then
+				if ask "${filename} already exists, overwrite?"; then
+					ln -sf $src $dst
+				fi
+			else
+				ln -s $src $dst
+			fi
+
+			if ! $(grep ".shell/$filename" $SH >/dev/null 2>&1); then
+				echo "source ~/.shell/$filename" >>"$SH"
+			fi
+		fi
+	done
+
+	ok "shell"
+}
+
 #
 # Main
 #
@@ -158,11 +209,15 @@ case "$TARGET" in
 "starship")
 	install_starship
 	;;
+"shell")
+	install_shell
+	;;
 "all")
 	install_vim
 	install_nvim
 	install_alacritty
 	install_tmux
+	install_shell
 	;;
 *)
 	error "Invalid target"
