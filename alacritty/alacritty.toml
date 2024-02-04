@@ -19,7 +19,7 @@ family = "Hack Nerd Font Mono"
 blur = false
 decorations = "transparent"
 dynamic_padding = false
-opacity = 0.9
+opacity = 0.95
 
 [window.dimensions]
 columns = 140
