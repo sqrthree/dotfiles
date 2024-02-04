@@ -101,6 +101,15 @@ install_tmux() {
   ok "tmux"
 }
 
+# install zsh configurations.
+install_zsh() {
+  install "zsh"
+
+  link_file $PWD/zsh/zshrc $HOME/.zshrc
+
+  ok "zsh"
+}
+
 # install starship configurations.
 install_starship() {
   install "starship"
@@ -160,6 +169,9 @@ case "$TARGET" in
   "tmux")
     install_tmux
     ;;
+  "zsh")
+    install_zsh
+    ;;
   "starship")
     install_starship
     ;;
@@ -171,6 +183,8 @@ case "$TARGET" in
     install_nvim
     install_alacritty
     install_tmux
+    install_zsh
+    install_starship
     install_shell
     ;;
   *)
