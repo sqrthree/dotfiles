@@ -9,6 +9,7 @@ alias ip='ipconfig getifaddr en0'            # Get the local IP address
 alias getip='curl -s https://httpbin.org/ip' # Get the external IP address
 
 # Use git like a pro.
+alias gsync='git fetch --prune && git pull && git delete-squashed-branches && git delete-merged-branches'
 alias git_top='git log --pretty="%aN" | sort | uniq -c | sort -k1 -n -r'
 alias git_top5='git log --pretty="%aN" | sort | uniq -c | sort -k1 -n -r | head -n 5'
 
