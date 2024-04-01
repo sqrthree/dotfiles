@@ -498,7 +498,7 @@ return {
       { "<leader>xl", "<cmd>TroubleToggle loclist<cr>", desc = "Location List (Trouble)",              mode = "n", silent = true, noremap = true },
       { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",         desc = "Quickfix List (Trouble)",     mode = "n", silent = true, noremap = true },
       {
-        "[q",
+        "[e",
         function()
           if require("trouble").is_open() then
             require("trouble").previous({ skip_groups = true, jump = true })
@@ -512,7 +512,7 @@ return {
         desc = "Previous trouble/quickfix item",
       },
       {
-        "]q",
+        "]e",
         function()
           if require("trouble").is_open() then
             require("trouble").next({ skip_groups = true, jump = true })
