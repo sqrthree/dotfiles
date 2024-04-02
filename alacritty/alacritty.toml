@@ -16,10 +16,10 @@ family = "Hack Nerd Font Mono"
 family = "Hack Nerd Font Mono"
 
 [window]
-blur = false
-decorations = "transparent"
 dynamic_padding = false
-opacity = 0.95
+decorations = "transparent"
+blur = true
+opacity = 0.9
 
 [window.dimensions]
 columns = 140
