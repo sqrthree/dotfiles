@@ -6,13 +6,13 @@ shape = "Block"
 [font]
 size = 14.0
 
+[font.normal]
+family = "Hack Nerd Font Mono"
+
 [font.bold]
 family = "Hack Nerd Font Mono"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
-
-[font.normal]
 family = "Hack Nerd Font Mono"
 
 [window]
