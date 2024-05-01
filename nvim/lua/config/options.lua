@@ -23,3 +23,6 @@ opt.list           = true                                         -- Show hidden
 opt.mouse          = ""                                           -- Disable mouse support.
 opt.history        = 1000                                         -- Set the command-lines that you enter are remembered in a history table.
 opt.listchars      = "tab:» ,trail:~,extends:→,precedes:←,nbsp:+" -- Makes :set list (visible whitespace) prettier.
+
+opt.exrc           = true
+opt.secure         = true

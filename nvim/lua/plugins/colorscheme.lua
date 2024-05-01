@@ -9,7 +9,18 @@ return {
         transparent = true,
         terminal_colors = true,
         dim_inactive = true,
+        lualine_bold = true,
         styles = {
+          comments = {
+            italic = true
+          },
+          keywords = {
+            bold = true,
+          },
+          functions = {},
+          variables = {
+            italic = true,
+          },
           sidebars = 'dark',
           floats = 'dark',
         },
