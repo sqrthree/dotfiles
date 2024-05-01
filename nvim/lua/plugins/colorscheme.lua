@@ -16,11 +16,10 @@ return {
           },
           keywords = {
             bold = true,
+            italic = false,
           },
           functions = {},
-          variables = {
-            italic = true,
-          },
+          variables = {},
           sidebars = 'dark',
           floats = 'dark',
         },
