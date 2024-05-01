@@ -1,4 +1,4 @@
-import = ["/Users/sqrtthree/.config/alacritty/alacritty-theme/themes/solarized_dark.toml"]
+import = ["~/.config/alacritty/alacritty-theme/themes/solarized_dark.toml"]
 
 [cursor.style]
 shape = "Block"
@@ -7,19 +7,22 @@ shape = "Block"
 size = 14.0
 
 [font.normal]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+family = "MonaspiceNe Nerd Font Mono"
 
 [font.bold]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+family = "MonaspiceKr Nerd Font Mono"
 
 [font.italic]
-family = "Hack Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
+family = "MonaspiceRn Nerd Font Mono"
 
 [window]
-dynamic_padding = false
-decorations = "transparent"
 blur = true
-opacity = 0.9
+decorations = "transparent"
+dynamic_padding = false
+opacity = 0.8
 
 [window.dimensions]
 columns = 140
