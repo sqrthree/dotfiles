@@ -7,16 +7,21 @@ shape = "Block"
 size = 14.0
 
 [font.normal]
-# family = "Hack Nerd Font Mono"
+# Monaspice is a vibrant of GitHub Monaspace.
+# More detail can be found at:
+#   https://monaspace.githubnext.com/
+#   https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Monaspace
 family = "MonaspiceNe Nerd Font Mono"
 
-[font.bold]
 # family = "Hack Nerd Font Mono"
+
+[font.bold]
 family = "MonaspiceKr Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
 
 [font.italic]
-# family = "Hack Nerd Font Mono"
 family = "MonaspiceRn Nerd Font Mono"
+# family = "Hack Nerd Font Mono"
 
 [window]
 blur = true
