@@ -92,6 +92,16 @@ install_alacritty() {
   ok "alacritty"
 }
 
+# install zed configurations.
+install_zed() {
+  install "zed"
+
+  mkdir -p $HOME/.config/zed
+  link_file $PWD/zed/settings.json $HOME/.config/zed/settings.json
+
+  ok "zed"
+}
+
 # install tmux configurations.
 install_tmux() {
   install "tmux"
@@ -165,6 +175,9 @@ case "$TARGET" in
     ;;
   "alacritty")
     install_alacritty
+    ;;
+  "zed")
+    install_zed
     ;;
   "tmux")
     install_tmux
