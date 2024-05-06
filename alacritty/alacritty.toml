@@ -27,7 +27,7 @@ family = "MonaspiceRn Nerd Font Mono"
 blur = true
 decorations = "transparent"
 dynamic_padding = false
-opacity = 0.8
+opacity = 0.9
 
 [window.dimensions]
 columns = 140
