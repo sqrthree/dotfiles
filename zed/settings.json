@@ -11,9 +11,9 @@
   "projects_online_by_default": false,
   "vim_mode": true,
   "vim": {
-     "use_system_clipboard": "never",
-     "use_multiline_find": true
-   },
+    "use_system_clipboard": "never",
+    "use_multiline_find": true
+  },
   "relative_line_numbers": true,
   "scrollbar": {
     "show": "auto"
@@ -28,7 +28,7 @@
   },
   "inlay_hints": {
     "enabled": true,
-    "show_type_hints": true,
+    "show_type_hints": false,
     "show_parameter_hints": true,
     "show_other_hints": true,
     "edit_debounce_ms": 700,
