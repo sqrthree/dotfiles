@@ -10,7 +10,7 @@ return {
     cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     keys = {
       { "<c-space>", desc = "Increment selection" },
-      { "<bs>", desc = "Decrement selection", mode = "x" },
+      { "<bs>",      desc = "Decrement selection", mode = "x" },
     },
     config = function()
       require('nvim-treesitter.configs').setup({
@@ -156,10 +156,10 @@ return {
     keys = {
       { "<C-p>",      "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)", mode = "n", silent = true, noremap = true },
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files (root dir)", mode = "n", silent = true, noremap = true },
-      { "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Grep (root dir)",  mode = "n", silent = true, noremap = true },
-      { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Grep (root dir)",  mode = "n", silent = true, noremap = true },
-      { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers", mode = "n", silent = true, noremap = true },
-      { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help Pages", mode = "n", silent = true, noremap = true },
+      { "<leader>/",  "<cmd>Telescope live_grep<cr>",  desc = "Grep (root dir)",       mode = "n", silent = true, noremap = true },
+      { "<leader>fg", "<cmd>Telescope live_grep<cr>",  desc = "Grep (root dir)",       mode = "n", silent = true, noremap = true },
+      { "<leader>fb", "<cmd>Telescope buffers<cr>",    desc = "Buffers",               mode = "n", silent = true, noremap = true },
+      { "<leader>fh", "<cmd>Telescope help_tags<cr>",  desc = "Help Pages",            mode = "n", silent = true, noremap = true },
     },
     config = function()
       local telescope  = require("telescope")
@@ -193,7 +193,7 @@ return {
         },
         extensions = {
           file_browser = {
-            hijack_netrw = true,                       -- disables netrw and use telescope-file-browser in its place
+            hijack_netrw = true, -- disables netrw and use telescope-file-browser in its place
             mappings = {
               ["i"] = {
                 ["<C-o>"] = actions.select_default,    -- open the selection in the current buffer
@@ -205,29 +205,29 @@ return {
                 ["<Tab>"] = fb_actions.change_cwd,     -- change working directory of nvim to the selected file/folder
               },
               ["n"] = {
-                ["o"]     = actions.select_default,    -- open the selection in the current buffer
-                ["s"]     = actions.select_horizontal, -- go to file selection as a split
-                ["x"]     = actions.select_horizontal, -- go to file selection as a split
-                ["v"]     = actions.select_vertical,   -- open the selection in a new vertical split
-                ["t"]     = actions.select_tab,        -- open the selection in a new tab
-                ["<Tab>"] = fb_actions.change_cwd,     -- change working directory of nvim to the selected file/folder
-                ["c"]     = fb_actions.create,         -- create file/folder at current path (trailing path separator creates folder)
-                ["p"] = fb_actions.goto_parent_dir,    -- go to parent directory
-                ["/"] = function()                     -- enter the insert mode to search files
+                ["o"]          = actions.select_default,     -- open the selection in the current buffer
+                ["s"]          = actions.select_horizontal,  -- go to file selection as a split
+                ["x"]          = actions.select_horizontal,  -- go to file selection as a split
+                ["v"]          = actions.select_vertical,    -- open the selection in a new vertical split
+                ["t"]          = actions.select_tab,         -- open the selection in a new tab
+                ["<Tab>"]      = fb_actions.change_cwd,      -- change working directory of nvim to the selected file/folder
+                ["c"]          = fb_actions.create,          -- create file/folder at current path (trailing path separator creates folder)
+                ["p"]          = fb_actions.goto_parent_dir, -- go to parent directory
+                ["/"]          = function()                  -- enter the insert mode to search files
                   vim.cmd("startinsert")
                 end,
-                ["<C-u>"] = function(prompt_bufnr)     -- move the selection 10 lines up
+                ["<C-u>"]      = function(prompt_bufnr) -- move the selection 10 lines up
                   for i = 1, 10 do
                     actions.move_selection_previous(prompt_bufnr)
                   end
                 end,
-                ["<C-d>"] = function(prompt_bufnr)     -- move the selection 10 lines down
+                ["<C-d>"]      = function(prompt_bufnr) -- move the selection 10 lines down
                   for i = 1, 10 do
                     actions.move_selection_next(prompt_bufnr)
                   end
                 end,
-                ["<PageUp>"] = actions.preview_scrolling_up,      -- scroll up the preview pane
-                ["<PageDown>"] = actions.preview_scrolling_down,  -- scroll down the preview pane
+                ["<PageUp>"]   = actions.preview_scrolling_up,   -- scroll up the preview pane
+                ["<PageDown>"] = actions.preview_scrolling_down, -- scroll down the preview pane
               },
             }
           }
@@ -249,7 +249,7 @@ return {
     },
   },
   {
-  "smjonas/inc-rename.nvim",
+    "smjonas/inc-rename.nvim",
     event = "VeryLazy",
     cmd = "IncRename",
     config = true,
@@ -423,7 +423,7 @@ return {
         ["docker"] = {
           pattern = "^dockerfile$",
           ignore_case = true,
-          files = { ".dockerignore", "docker-compose.*", "dockerfile*" }, 
+          files = { ".dockerignore", "docker-compose.*", "dockerfile*" },
         },
       },
     },
@@ -492,11 +492,11 @@ return {
     cmd = { "TroubleToggle", "Trouble" },
     opts = { use_diagnostic_signs = true },
     keys = {
-      { "<leader>xx", "<cmd>TroubleToggle<cr>",  desc = "Diagnostics (Troble)",                      mode = "n", silent = true, noremap = true },
-      { "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",  desc = "Workspace Diagnostics (Trouble)", mode = "n", silent = true, noremap = true },
-      { "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", desc = "Document Diagnostics (Trouble)",  mode = "n", silent = true, noremap = true },
-      { "<leader>xl", "<cmd>TroubleToggle loclist<cr>", desc = "Location List (Trouble)",              mode = "n", silent = true, noremap = true },
-      { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",         desc = "Quickfix List (Trouble)",     mode = "n", silent = true, noremap = true },
+      { "<leader>xx", "<cmd>TroubleToggle<cr>",                       desc = "Diagnostics (Troble)",            mode = "n", silent = true, noremap = true },
+      { "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", desc = "Workspace Diagnostics (Trouble)", mode = "n", silent = true, noremap = true },
+      { "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",  desc = "Document Diagnostics (Trouble)",  mode = "n", silent = true, noremap = true },
+      { "<leader>xl", "<cmd>TroubleToggle loclist<cr>",               desc = "Location List (Trouble)",         mode = "n", silent = true, noremap = true },
+      { "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",              desc = "Quickfix List (Trouble)",         mode = "n", silent = true, noremap = true },
       {
         "[e",
         function()
@@ -544,7 +544,9 @@ return {
           })
         end,
         -- mode = { "n", "v" },
-mode = "n", silent = true, noremap = true,
+        mode = "n",
+        silent = true,
+        noremap = true,
         desc = "Format buffer",
       },
     },
