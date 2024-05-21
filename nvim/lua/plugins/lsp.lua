@@ -5,6 +5,23 @@ return {
     dependencies = {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
+      {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {
+          "SmiteshP/nvim-navic",
+          "MunifTanjim/nui.nvim"
+        },
+        config = function()
+          local navbuddy = require("nvim-navbuddy")
+
+          navbuddy.setup({})
+
+          -- Mappings.
+          local opts = { noremap = true, silent = true }
+
+          vim.keymap.set("n", "<leader>nb", navbuddy.open, opts)
+        end
+      }
     },
     opts = {
       -- options for vim.diagnostic.config()
@@ -21,18 +38,27 @@ return {
     },
     config = function(_, _opts)
       local lspconfig = require("lspconfig")
+      local schemas = require('schemastore').json.schemas()
+      local navic = require("nvim-navic")
+      local navbuddy = require("nvim-navbuddy")
 
       vim.diagnostic.config(vim.deepcopy(_opts.diagnostics))
 
       -- Add additional capabilities supported by nvim-cmp
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      local on_attach = function(client, bufnr)
+        if client.server_capabilities.documentSymbolProvider then
+          navic.attach(client, bufnr)
+          navbuddy.attach(client, bufnr)
+        end
+      end
+
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
       lspconfig.tsserver.setup({
         capabilities = capabilities,
+        on_attach = on_attach
       })
-
-      local schemas = require('schemastore').json.schemas()
 
       lspconfig.jsonls.setup({
         capabilities = capabilities,
