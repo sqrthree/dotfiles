@@ -37,6 +37,11 @@ return {
       },
     },
     config = function(_, _opts)
+      local mason_registry = require("mason-registry")
+      local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
+          .. "/node_modules/@vue/language-server"
+          .. "/node_modules/@vue/typescript-plugin"
+
       local lspconfig = require("lspconfig")
       local schemas = require('schemastore').json.schemas()
       local navic = require("nvim-navic")
@@ -57,8 +62,20 @@ return {
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
       lspconfig.tsserver.setup({
         capabilities = capabilities,
-        on_attach = on_attach
+        on_attach = on_attach,
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = vue_language_server_path,
+              languages = { 'vue' },
+            },
+          },
+        },
+        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
       })
+
+      lspconfig.volar.setup({})
 
       lspconfig.jsonls.setup({
         capabilities = capabilities,
@@ -143,6 +160,7 @@ return {
       -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
       ensure_installed = {
         "tsserver",
+        "volar",
         "jsonls",
         "bashls",
       },
