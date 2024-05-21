@@ -28,13 +28,22 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-      local servers = { 'tsserver' }
-      for _, lsp in ipairs(servers) do
-        lspconfig[lsp].setup({
-          -- on_attach = my_custom_on_attach,
-          capabilities = capabilities,
-        })
-      end
+      lspconfig.tsserver.setup({
+        capabilities = capabilities,
+      })
+
+      local schemas = require('schemastore').json.schemas()
+
+      lspconfig.jsonls.setup({
+        capabilities = capabilities,
+        settings = {
+          json = {
+            schemas = schemas,
+            format = { enable = true },
+            validate = { enable = true },
+          },
+        },
+      })
 
       -- Mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -100,8 +109,11 @@ return {
       "williamboman/mason.nvim",
     },
     opts = {
+      -- ALl available LSP servers can be found at the following url:
+      -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
       ensure_installed = {
         "tsserver",
+        "jsonls",
       },
       automatic_installation = true,
     },
