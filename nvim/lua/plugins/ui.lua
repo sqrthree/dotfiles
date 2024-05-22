@@ -262,7 +262,17 @@ return {
       "SmiteshP/nvim-navic",
       "nvim-tree/nvim-web-devicons",
     },
-    config = true,
+    config = function()
+      require("barbecue").setup({
+        -- While `barbecue.nvim` offers automatic attachment of `nvim-navic`,
+        -- it's recommended to manage `nvim-navic` manually during LSP server
+        -- initialization. This is because `nvim-navic` can only connect to one
+        -- LSP server at a time, Conflicts can arise if `barbecue`
+        -- auto-attaches it when using multiple LSP servers like `tsserver` and
+        -- `volar`.
+        attach_navic = false, -- prevent barbecue from automatically attaching nvim-navic.
+      })
+    end
   },
   {
     "stevearc/dressing.nvim",

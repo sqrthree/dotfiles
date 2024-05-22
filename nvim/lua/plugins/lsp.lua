@@ -40,7 +40,6 @@ return {
       local mason_registry = require("mason-registry")
       local vue_language_server_path = mason_registry.get_package('vue-language-server'):get_install_path()
           .. "/node_modules/@vue/language-server"
-          .. "/node_modules/@vue/typescript-plugin"
 
       local lspconfig = require("lspconfig")
       local schemas = require('schemastore').json.schemas()
@@ -79,6 +78,7 @@ return {
 
       lspconfig.jsonls.setup({
         capabilities = capabilities,
+        on_attach = on_attach,
         settings = {
           json = {
             schemas = schemas,
@@ -90,6 +90,7 @@ return {
 
       lspconfig.bashls.setup({
         capabilities = capabilities,
+        on_attach = on_attach,
       })
 
       -- Mappings.
