@@ -119,5 +119,8 @@ source ~/.shell/aliases.sh
 
 autoload -U +X bashcompinit && bashcompinit
 
+# Set up fzf key bindings and fuzzy completion. See https://github.com/junegunn/fzf#setting-up-shell-integration to get more details.
+source <(fzf --zsh)
+
 # Enable starship. See https://starship.rs/guide/ to get more details.
 eval "$(starship init zsh)"
