@@ -35,6 +35,7 @@ return {
           "javascript",
           "typescript",
           "tsx",
+          "vue",
           "json",
           "yaml",
           "go",
