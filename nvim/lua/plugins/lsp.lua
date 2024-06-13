@@ -108,10 +108,12 @@ return {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(args)
           -- Enable the inlay hints by default.
-          -- local client = vim.lsp.get_client_by_id(args.data.client_id)
-          -- if client.server_capabilities.inlayHintProvider then
-          --   vim.lsp.inlay_hint.enable(args.buf, true)
-          -- end
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if client.server_capabilities.inlayHintProvider then
+            vim.lsp.inlay_hint.enable(true, {
+              bufnr = args.buf
+            })
+          end
 
           -- Enable completion triggered by <c-x><c-o>
           vim.bo[args.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
