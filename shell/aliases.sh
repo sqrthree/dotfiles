@@ -18,3 +18,7 @@ alias pon='export http_proxy=http://proxy.internal:7890;export https_proxy=$http
 alias poff='unset http_proxy;unset https_proxy; unset all_proxy;'
 alias proxy='export http_proxy=http://proxy.internal:7890;export https_proxy=$http_proxy; export all_proxy=$http_proxy;'
 alias unproxy='unset http_proxy;unset https_proxy; unset all_proxy;'
+
+# Format changed only
+alias pretty='prettier -w $(git diff --name-only --diff-filter=AM)'
+
