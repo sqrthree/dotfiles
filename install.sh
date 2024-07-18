@@ -41,3 +41,8 @@ fi
 for file in "${WORKING_DIR}"/*/install.sh; do
   sh -c "${file}"
 done
+
+echo 'To install brew packages, please run:
+
+> brew bundle
+'

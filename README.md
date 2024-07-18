@@ -14,3 +14,9 @@ cd ~/.dotfiles
 chmod u+x ./install.sh
 ./install.sh
 ```
+
+To install brew packages:
+
+```
+brew bundle
+```
