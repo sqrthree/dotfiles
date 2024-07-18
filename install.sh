@@ -7,11 +7,11 @@
 set -e
 
 if [[ "${TRACE-0}" == "1" ]]; then
-    set -o xtrace
+  set -o xtrace
 fi
 
 if [[ "${1-}" =~ ^-*h(elp)?$ ]]; then
-    echo 'A script to install dotfiles. After installing, open a new terminal window to see the effects.
+  echo 'A script to install dotfiles. After installing, open a new terminal window to see the effects.
 
 Usage:
   ./install.sh [name]
@@ -20,7 +20,7 @@ Example:
   To install all:         ./install.sh
   To install shell only:  ./install.sh shell
 '
-    exit
+  exit
 fi
 
 cd "$(dirname "$0")"
@@ -38,7 +38,6 @@ if [[ ! -d "$CONFIG_DIR" ]]; then
 fi
 
 # Run installers
-for file in "${WORKING_DIR}"/*/install.sh
-do
+for file in "${WORKING_DIR}"/*/install.sh; do
   sh -c "${file}"
 done
