@@ -28,6 +28,16 @@ fail() {
   exit 1
 }
 
+# log install message.
+install() {
+  info "[$1] Installing..."
+}
+
+# log ok message.
+ok() {
+  success "[$1] OK"
+}
+
 ###
 # Confirm Y/n
 #
