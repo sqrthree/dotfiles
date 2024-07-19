@@ -1,0 +1,59 @@
+[init]
+  defaultBranch = main
+[branch]
+  sort = -committerdate
+[core]
+  excludesfile = ~/.config/git/gitignore
+  editor = vim
+  filemode = false
+  mergeoptions = --no-edit
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[diff]
+  colorMoved = default
+[difftool]
+  prompt = false
+[fetch]
+  prune = true
+  pruneTags = true
+[pull]
+  rebase = true
+[push]
+  default = simple
+  autoSetupRemote = true
+  useForceIfIncludes = true
+[rebase]
+  autoStash = true
+  autosquash = true
+[rerere]
+  enabled = true
+[status]
+  showUntrackedFiles = all
+[commit]
+  template = ~/.config/git/gitmessage
+[tag]
+  sort = -version:refname
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+[mergetool]
+  keepBackup = false
+[grep]
+  fullName = true
+  lineNumber = true
+[alias]
+  graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %Cgreen(%aN, %ar)'
+  pushf = push --force-with-lease --force-if-includes
+[apply]
+  whitespace = nowarn
+[help]
+  autocorrect = 1
+
+# Local/private config goes in the include
+[include]
+  path = ~/.gitconfig.local
+[includeIf "gitdir/i:~/Sites/github.com/"]
+  path = ~/.gitconfig.github
