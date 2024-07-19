@@ -38,11 +38,20 @@ if [[ ! -d "$CONFIG_DIR" ]]; then
 fi
 
 # Run installers
-for file in "${WORKING_DIR}"/*/install.sh; do
-  sh -c "${file}"
-done
+install_all() {
+  for file in "${WORKING_DIR}"/*/install.sh; do
+    sh -c "${file}"
+  done
 
-echo 'To install brew packages, please run:
+  echo ""
+  echo 'To install brew packages, please run:
 
 > brew bundle
 '
+}
+
+if [[ -z "$1" ]]; then
+  install_all
+else
+  sh -c "./$1/install.sh"
+fi
