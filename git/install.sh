@@ -17,9 +17,9 @@ source "../utils.sh"
 install_git() {
   install "git"
 
+  mkdir -p $HOME/.config/git
   link_file $PWD/gitconfig $HOME/.gitconfig
   touch $HOME/.gitconfig.local
-  mkdir -p $HOME/.config/git
   link_file $PWD/gitignore $HOME/.config/git/gitignore
   link_file $PWD/gitmessage $HOME/.config/git/gitmessage
 

@@ -17,6 +17,7 @@ source "../utils.sh"
 install_fish() {
   install "fish"
 
+  mkdir -p $HOME/.config/fish
   link_file $PWD/config.fish $HOME/.config/fish/config.fish
 
   ok "zsh"
