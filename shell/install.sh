@@ -18,6 +18,8 @@ SH="${HOME}/.bashrc"
 ZSHRC="${HOME}/.zshrc"
 SHELL_DIR="$HOME/.shell"
 
+INSTALL_FILE="install.sh"
+
 if [ -f "$ZSHRC" ]; then
   SH="$ZSHRC"
 fi
@@ -28,23 +30,29 @@ install_shell() {
     mkdir $SHELL_DIR
   fi
 
-  for file in shell/*; do
-    if [[ -f "$file" ]]; then
-      local filename src dst
-      filename=$(basename "$file")
-      src=$(realpath "$file")
-      dst="$SHELL_DIR/$filename"
+  for file in *.sh; do
+    if [[ $file != *$INSTALL_FILE ]]; then
+      if [[ -f "$file" ]]; then
+        local filename src dst
 
-      if [[ -e "$dst" ]]; then
-        if ask "${filename} already exists, overwrite?"; then
-          ln -sf $src $dst
+        filename=$(basename "$file")
+        src=$(realpath "$file")
+        dst="$SHELL_DIR/$filename"
+
+        if [[ -e "$dst" ]]; then
+          if ask "${filename} already exists, overwrite?"; then
+            ln -sf $src $dst
+          fi
+        else
+          ln -s $src $dst
         fi
-      else
-        ln -s $src $dst
-      fi
 
-      if ! $(grep ".shell/$filename" $SH >/dev/null 2>&1); then
-        echo "source ~/.shell/$filename" >>"$SH"
+        if ! $(grep ".shell/$filename" $SH >/dev/null 2>&1); then
+          echo "
+if [ -f ~/.shell/$filename ]; then
+  . ~/.shell/$filename
+fi" >>"$SH"
+        fi
       fi
     fi
   done
