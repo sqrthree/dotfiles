@@ -40,7 +40,7 @@ install_shell() {
         dst="$SHELL_DIR/$filename"
 
         if [[ -e "$dst" ]]; then
-          if ask "${filename} already exists, overwrite?"; then
+          if confirm "${filename} already exists, overwrite?"; then
             ln -sf $src $dst
           fi
         else
