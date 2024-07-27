@@ -149,7 +149,7 @@ return {
         typescript      = { "cspell", "eslint", "tsserver", "typecheck" },
         typescriptreact = { "cspell", "eslint", "tsserver", "typecheck" },
         tsx             = { "cspell", "eslint", "tsserver", "typecheck" },
-        vue             = { "cspell", "volar" },
+        vue             = { "cspell", "tsserver", "volar" },
         json            = { "cspell", "eslint", },
         css             = { "stylelint" },
         go              = { "cspell", "gofmt", "gopls", "golint" },
