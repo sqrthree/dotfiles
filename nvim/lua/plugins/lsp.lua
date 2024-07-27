@@ -198,14 +198,19 @@ return {
           -- this value is passed to: https://nodejs.org/api/cli.html#--max-old-space-sizesize-in-megabytes
           -- memory limit in megabytes or "auto"(basically no limit)
           tsserver_max_memory = "auto",
-          -- You can find available options in typescript repository.
+          -- All available options can be found in typescript repository.
           -- Example: https://github.com/microsoft/TypeScript/blob/v5.0.4/src/server/protocol.ts#L3439
-          tsserver_format_options = {
-            includeInlayParameterNameHints = "all",
-            includeInlayParameterNameHintsWhenArgumentMatchesName = false,
-          },
+          tsserver_format_options = {},
           -- Example: https://github.com/microsoft/TypeScript/blob/v5.0.4/src/server/protocol.ts#L3418
-          tsserver_file_preferences = {},
+          tsserver_file_preferences = {
+            includeInlayParameterNameHints = 'all', -- "none" | "literals" | "all";
+            includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayVariableTypeHints = true,
+            includeInlayVariableTypeHintsWhenTypeMatchesName = false,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayFunctionLikeReturnTypeHints = false,
+          },
           -- locale of all tsserver messages, supported locales you can find here:
           -- https://github.com/microsoft/TypeScript/blob/3c221fc086be52b19801f6e8d82596d04607ede6/src/compiler/utilitiesPublic.ts#L620
           tsserver_locale = "en",
