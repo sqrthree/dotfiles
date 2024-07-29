@@ -62,9 +62,9 @@ return {
             includeInlayParameterNameHints = 'all', -- "none" | "literals" | "all";
             includeInlayParameterNameHintsWhenArgumentMatchesName = false,
             includeInlayFunctionParameterTypeHints = true,
-            includeInlayVariableTypeHints = true,
+            includeInlayVariableTypeHints = false,
             includeInlayVariableTypeHintsWhenTypeMatchesName = false,
-            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayPropertyDeclarationTypeHints = false,
             includeInlayFunctionLikeReturnTypeHints = false,
           },
           -- locale of all tsserver messages, supported locales you can find here:
