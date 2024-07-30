@@ -211,7 +211,7 @@ return {
         ignore_blank_line = true,
 
         -- Whether to recognize as comment only lines without indent
-        start_of_line = true,
+        start_of_line = false,
 
         -- Function to compute custom 'commentstring'
         custom_commentstring = function()
