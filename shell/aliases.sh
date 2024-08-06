@@ -15,7 +15,7 @@ alias proxy='export http_proxy=http://proxy.internal:7890;export https_proxy=$ht
 alias unproxy='unset http_proxy;unset https_proxy; unset all_proxy;'
 
 # Use git like a pro.
-alias gsync='git fetch --prune && git pull && git delete-squashed-branches && git delete-merged-branches'
+alias gsync='git fetch --all --prune && git pull && git delete-squashed-branches && git delete-merged-branches'
 
 # Format changed only
 alias pretty='prettier -w $(git diff --name-only --diff-filter=AM)'

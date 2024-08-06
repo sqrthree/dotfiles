@@ -38,7 +38,7 @@ alias unproxy='set -e http_proxy && set -e https_proxy && set -e all_proxy'
 
 # Use git likes a pro
 # Synchronize the latest remote changes to the local.
-abbr -a -- gsync 'git fetch --prune && git pull && git delete-squashed-branches && git delete-merged-branches'
+abbr -a -- gsync 'git fetch --all --prune && git pull && git delete-squashed-branches && git delete-merged-branches'
 
 # Format changed only
 abbr -a -- pretty 'prettier -w $(git diff --name-only --diff-filter=AM)'
