@@ -47,6 +47,8 @@
 [alias]
   graph = log --all --graph --pretty=format:'%C(auto)%h%C(auto)%d %s %Cgreen(%aN, %ar)'
   pushf = push --force-with-lease --force-if-includes
+  # Remove local branches that are gone on remote
+  gone= "!git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1;}'"
 [apply]
   whitespace = nowarn
 [help]
