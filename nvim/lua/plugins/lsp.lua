@@ -141,6 +141,7 @@ return {
       -- ALl available LSP servers can be found at the following url:
       -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
       ensure_installed = {
+        "tsserver",
         "volar",
         "jsonls",
         "bashls",
