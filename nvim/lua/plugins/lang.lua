@@ -59,7 +59,7 @@ return {
           tsserver_format_options = {},
           -- Example: https://github.com/microsoft/TypeScript/blob/v5.0.4/src/server/protocol.ts#L3418
           tsserver_file_preferences = {
-            includeInlayParameterNameHints = 'all', -- "none" | "literals" | "all";
+            includeInlayParameterNameHints = 'literals', -- "none" | "literals" | "all";
             includeInlayParameterNameHintsWhenArgumentMatchesName = false,
             includeInlayFunctionParameterTypeHints = false,
             includeInlayVariableTypeHints = false,
