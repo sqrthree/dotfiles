@@ -13,6 +13,16 @@ cd "$(dirname "$0")"
 # source utils
 source "../utils.sh"
 
+install_font() {
+  install "fonts"
+
+  # remove all fonts from ~/Library/Fonts that start with "Monaspace"
+  rm -rf ~/Library/Fonts/Monaspace*
+
+  # copy all fonts from ./fonts to ~/Library/Fonts
+  cp ./fonts/* ~/Library/Fonts
+}
+
 # install alacritty configurations.
 install_alacritty() {
   install "alacritty"
@@ -25,6 +35,8 @@ install_alacritty() {
     info "[alacritty]   for more information on available themes, please see https://github.com/alacritty/alacritty-theme#color-schemes"
     git clone -f https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/alacritty-theme
   fi
+
+  install_font
 
   ok "alacritty"
 }
