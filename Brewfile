@@ -1,9 +1,5 @@
-# set arguments for all 'brew install --cask' commands
-cask_args appdir: "/Applications", require_sha: true
-
 tap "dotenvx/brew"
 tap "homebrew/bundle"
-
 brew "bat"
 brew "fd"
 brew "fish"
@@ -15,6 +11,8 @@ brew "git-extras"
 brew "go"
 brew "httpie"
 brew "jq"
+brew "mas"
+brew "tree-sitter"
 brew "neovim"
 brew "node"
 brew "pnpm"
@@ -24,19 +22,20 @@ brew "shfmt"
 brew "starship"
 brew "tmux"
 brew "tree"
-brew "wget"
 brew "watch"
+brew "wget"
 brew "xh"
 brew "yazi"
 brew "zoxide"
 brew "dotenvx/brew/dotenvx"
-brew "mas"
-
-cask "alacritty"
-cask "slack"
-cask "raycast"
-cask "1password"
-cask "zed"
-cask "visual-studio-code"
-cask "orbstack"
-cask "input-source-pro"
+cask "1password", args: { appdir: "/Applications" }
+cask "alacritty", args: { appdir: "/Applications" }
+cask "input-source-pro", args: { appdir: "/Applications" }
+cask "orbstack", args: { appdir: "/Applications" }
+cask "raycast", args: { appdir: "/Applications" }
+cask "slack", args: { appdir: "/Applications" }
+cask "visual-studio-code", args: { appdir: "/Applications" }
+cask "zed", args: { appdir: "/Applications" }
+mas "Amphetamine", id: 937984704
+mas "Microsoft To Do", id: 1274495053
+mas "Xcode", id: 497799835
