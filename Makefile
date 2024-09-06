@@ -1,4 +1,4 @@
-all: fmt lint
+all: fmt
 
 fmt:
 	@shfmt -i 2 -ci -w **/*.sh

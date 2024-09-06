@@ -30,7 +30,7 @@ install_alacritty() {
   mkdir -p $HOME/.config/alacritty
   link_file $PWD/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
-  if ! [[ -d $HOME/.config/alacritty/alacritty-theme ]] ; then
+  if ! [[ -d $HOME/.config/alacritty/alacritty-theme ]]; then
     info "[alacritty] Installing alacritty theme..."
     info "[alacritty]   for more information on available themes, please see https://github.com/alacritty/alacritty-theme#color-schemes"
     git clone -f https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/alacritty-theme
