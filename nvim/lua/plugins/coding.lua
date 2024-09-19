@@ -15,6 +15,7 @@ return {
     config = function()
       local cmp = require("cmp")
       local defaults = require("cmp.config.default")()
+      local auto_select = true
 
       local has_words_before = function()
         local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -29,9 +30,10 @@ return {
             require("luasnip").lsp_expand(args.body)
           end,
         },
-        preselect = cmp.PreselectMode.Item,
+        auto_brackets = {}, -- configure any filetype to auto add brackets
+        preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
         completion = {
-          completeopt = 'menu,menuone,preview'
+          completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-d>"] = cmp.mapping.scroll_docs(-4),
