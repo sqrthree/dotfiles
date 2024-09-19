@@ -49,6 +49,13 @@ return {
           navic.attach(client, bufnr)
           navbuddy.attach(client, bufnr)
         end
+
+        -- Enable the inlay hints by default.
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, {
+            bufnr = buffer
+          })
+        end
       end
 
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
@@ -89,14 +96,6 @@ return {
         group = vim.api.nvim_create_augroup("UserLspConfig", {}),
         callback = function(args)
           local buffer = args.buf
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-          -- Enable the inlay hints by default.
-          if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(true, {
-              bufnr = buffer
-            })
-          end
 
           -- Enable completion triggered by <c-x><c-o>
           vim.bo[buffer].omnifunc = "v:lua.vim.lsp.omnifunc"

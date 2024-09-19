@@ -25,6 +25,13 @@ return {
           navic.attach(client, bufnr)
           navbuddy.attach(client, bufnr)
         end
+
+        -- Enable the inlay hints by default.
+        if client.server_capabilities.inlayHintProvider then
+          vim.lsp.inlay_hint.enable(true, {
+            bufnr = buffer
+          })
+        end
       end
 
       require("typescript-tools").setup({
