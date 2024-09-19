@@ -1,13 +1,3 @@
-local on_attach = function(client, bufnr)
-  local navic = require("nvim-navic")
-  local navbuddy = require("nvim-navbuddy")
-
-  if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, bufnr)
-    navbuddy.attach(client, bufnr)
-  end
-end
-
 return {
   {
     "neovim/nvim-lspconfig",
@@ -50,6 +40,16 @@ return {
 
       -- Add additional capabilities supported by nvim-cmp
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      local on_attach = function(client, bufnr)
+        local navic = require("nvim-navic")
+        local navbuddy = require("nvim-navbuddy")
+
+        if client.server_capabilities.documentSymbolProvider then
+          navic.attach(client, bufnr)
+          navbuddy.attach(client, bufnr)
+        end
+      end
 
       -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
       lspconfig.jsonls.setup({

@@ -17,6 +17,16 @@ return {
           .. "/node_modules/@vue/language-server"
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      local on_attach = function(client, bufnr)
+        local navic = require("nvim-navic")
+        local navbuddy = require("nvim-navbuddy")
+
+        if client.server_capabilities.documentSymbolProvider then
+          navic.attach(client, bufnr)
+          navbuddy.attach(client, bufnr)
+        end
+      end
+
       require("typescript-tools").setup({
         on_attach = on_attach,
         capabilities = capabilities,
