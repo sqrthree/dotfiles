@@ -25,8 +25,8 @@ family = "MonaspiceRn Nerd Font Mono"
 
 [window]
 blur = true
-decorations = "transparent"
-dynamic_padding = false
+decorations = "Buttonless"
+dynamic_padding = true
 opacity = 0.9
 
 [window.dimensions]
@@ -34,5 +34,5 @@ columns = 140
 lines = 48
 
 [window.padding]
-x = 12
-y = 28
+x = 8
+y = 2
