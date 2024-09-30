@@ -4,14 +4,15 @@ brew "bat"
 brew "colordiff"
 brew "fd"
 brew "fish"
+brew "fnm"
 brew "fx"
 brew "fzf"
 brew "gh"
 brew "git"
 brew "git-delta"
 brew "git-extras"
-brew "go"
 brew "gnupg"
+brew "go"
 brew "httpie"
 brew "jq"
 brew "luacheck"
@@ -26,6 +27,7 @@ brew "rust"
 brew "shfmt"
 brew "starship"
 brew "stylua"
+brew "tig"
 brew "tmux"
 brew "tree"
 brew "unbound"
@@ -45,4 +47,5 @@ cask "visual-studio-code", args: { appdir: "/Applications" }
 cask "zed", args: { appdir: "/Applications" }
 mas "Amphetamine", id: 937984704
 mas "Microsoft To Do", id: 1274495053
+mas "Paste", id: 967805235
 mas "Xcode", id: 497799835
