@@ -1,3 +1,4 @@
+[general]
 import = ["~/.config/alacritty/alacritty-theme/themes/solarized_dark.toml"]
 
 [cursor.style]
