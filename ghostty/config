@@ -2,7 +2,6 @@
 theme = Builtin Solarized Dark
 background-opacity = 0.9
 background-blur-radius = 20
-window-theme = ghostty
 
 # Fonts
 font-family = "MonaspiceNe Nerd Font Mono"
