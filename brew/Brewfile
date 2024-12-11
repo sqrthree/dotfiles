@@ -39,6 +39,7 @@ brew "zoxide"
 brew "dotenvx/brew/dotenvx"
 cask "1password", args: { appdir: "/Applications" }
 cask "alacritty", args: { appdir: "/Applications" }
+cask "bruno"
 cask "input-source-pro", args: { appdir: "/Applications" }
 cask "orbstack", args: { appdir: "/Applications" }
 cask "raycast", args: { appdir: "/Applications" }
