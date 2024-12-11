@@ -88,8 +88,11 @@ source ~/.shell/env.sh
 
 autoload -U +X bashcompinit && bashcompinit
 
-# Set up fzf key bindings and fuzzy completion. See https://github.com/junegunn/fzf#setting-up-shell-integration to get more details.
+# Set up fzf key bindings and fuzzy completion. See https://github.com/junegunn/fzf#setting-up-shell-integration for more details.
 source <(fzf --zsh)
 
-# Enable starship. See https://starship.rs/guide/ to get more details.
+# Set up starship. See https://starship.rs/guide/ for more details.
 eval "$(starship init zsh)"
+
+# Set up direnv. See https://github.com/direnv/direnv/blob/master/docs/hook.md for more details.
+eval "$(direnv hook zsh)"

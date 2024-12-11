@@ -45,8 +45,13 @@ abbr -a -- pretty 'prettier -w $(git diff --name-only --diff-filter=AM)'
 
 fish_add_path /Users/sqrtthree/.cargo/bin
 
-starship init fish | source
 zoxide init fish | source
 
-# Set up fzf key bindings
+# Set up fzf key bindings and fuzzy completion. See https://github.com/junegunn/fzf#setting-up-shell-integration for more details.
 fzf --fish | source
+
+# Set up starship. See https://starship.rs/guide/ for more details.
+starship init fish | source
+
+# Set up direnv. See https://github.com/direnv/direnv/blob/master/docs/hook.md for more details.
+direnv hook fish | source
