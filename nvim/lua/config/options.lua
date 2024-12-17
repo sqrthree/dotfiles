@@ -12,6 +12,7 @@ opt.shiftwidth     = 2                                            -- Change the 
 opt.expandtab      = true                                         -- Converts tabs to spaces
 opt.scrolloff      = 999                                          -- Always show at least n lines above/below the cursor. set to a large value causes the cursor to stay in the middle line when possible.
 opt.cursorline     = true                                         -- Enable highlighting of the current line
+opt.cursorcolumn   = true                                         -- Enable highlighting of the current column
 opt.cc             = "80,120"                                     -- Setup a ruler at specific columns.
 opt.showmatch      = true                                         -- Enable a special bracket highlighting while in insert mode.
 opt.ignorecase     = true                                         -- Makes pattern matching case-insensitive.
