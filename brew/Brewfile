@@ -38,8 +38,8 @@ brew "zellij"
 brew "zoxide"
 brew "dotenvx/brew/dotenvx"
 cask "1password", args: { appdir: "/Applications" }
-cask "alacritty", args: { appdir: "/Applications" }
-cask "bruno"
+cask "bruno", args: { appdir: "/Applications" }
+cask "ghostty", args: { appdir: "/Applications" }
 cask "input-source-pro", args: { appdir: "/Applications" }
 cask "orbstack", args: { appdir: "/Applications" }
 cask "raycast", args: { appdir: "/Applications" }
