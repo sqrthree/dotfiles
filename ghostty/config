@@ -27,5 +27,6 @@ window-padding-balance = true
 
 # Other
 copy-on-select = clipboard
+clipboard-trim-trailing-spaces = true
 quit-after-last-window-closed = true
 shell-integration-features = no-cursor
