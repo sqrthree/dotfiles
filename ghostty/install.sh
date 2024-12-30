@@ -21,6 +21,8 @@ install_ghostty() {
   link_file $PWD/config $HOME/.config/ghostty/config
 
   ok "ghostty"
+
+  info "See https://ghostty.org/docs/help/terminfo to get information on how to setup Terminfo if needed."
 }
 
 install_ghostty
